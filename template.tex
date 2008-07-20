@@ -1,0 +1,239 @@
+% UCSD Mathematics Dissertation Template
+%
+% Please read the comments in this file and make appropriate edits.
+% NOTE: Always refer to the ``Preperation and Submission Manual for 
+% Doctoral Dissertations and Masters Theses for 20**'', where 20** is 
+% the year of your graduation, for officiation preparations guidelines.
+%
+% If you desire more control, please see the attached files:
+%   * ucsd.cls -- Class file
+%   * uct10.clo, uct11.clo, uct12.clo -- Configuration files for font sizes 10pt,11pt,12pt
+%
+% CHANGELOG:
+%   * Original file adapted from brockman.tex by JRB and RMR
+%     to work with ucsd.cls
+
+
+\documentclass[12pt,chapterheads]{ucsd}
+% documentclass options: default is 11pt, oneside, final.
+% fonts: 10pt, 11pt, 12pt -- are valid for UCSD dissertations.
+% sides: oneside, twoside -- note that two-sided theses are not accepted by OGS
+% mode: draft, final -- draft mode switches to single spacing, removes hyperlinks,
+%                       and places a black box at every overfull hbox (check these before submission).
+% chapterheads -- include this if you want your chapters to read:
+% Chapter 1
+% Title of Chapter
+%
+% instead of
+%
+% 1 Title of Chapter
+
+
+% Include all packages you need here.  Some standard options are suggested below.
+
+% GEOMETRY - This will force the use of Letter paper.
+% Many TeX installations default to A4 paper.  The formatting
+% of the thesis class file requires Letter, else the margins
+% will be wrong when you go to print it (and OGS will complain).
+% If your TeX implementation is not setup for Letter paper, and
+% you cannot change it, uncommenting the following line may fix 
+% problem.
+% \usepackage[paper=letterpaper]{geometry}
+
+
+%% AMS PACKAGES - Chances are you will want some or all of these if writing a math dissertation.
+% \usepackage{amsmath, amscd, amssymb, amsthm}
+
+%% GRAPHICX - This is the standard package for including graphics for latex/pdflatex.
+% \usepackage{graphicx}
+
+%% LATIN MODERN FONTS (replacements for Computer Modern)
+% \usepackage{lmodern}
+% \usepackage[T1]{fontenc}
+
+%% INDEX
+% Uncomment the following two lines to create an index: 
+% \usepackage{makeidx}
+% \makeindex
+% You will need to uncomment the \printindex line near the
+% bibliography to display the index.  Use the command
+% \index{keyword} within the text to create an entry in the index
+% for keyword.
+
+%% HYPERLINKS
+% To create a PDF with hyperlinks, you need to include the hyperref package.
+% THIS HAS TO BE THE LAST PACKAGE INCLUDED!
+% Note that the options plainpages=false and pdfpagelabels exist
+% to fix indexing associated with having both (ii) and (2) as pages.
+% Also, all links must be black according to OGS.
+% See: http://www.tex.ac.uk/cgi-bin/texfaq2html?label=hyperdupdest
+% Note: This may not work correctly with all DVI viewers (i.e. Yap breaks).
+% \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=black, citecolor=black, urlcolor=black,plainpages=false,pdfpagelabels]{hyperref}
+% \hypersetup{ pdfauthor = {Your Name Here}, pdftitle = {The Title of The Dissertation}, pdfkeywords = {Keywords for Searching}, pdfcreator = {pdfLaTeX with hyperref package}, pdfproducer = {pdfLaTeX}}
+
+\begin{document}
+
+%% REQUIRED FIELDS -- Replace with the values appropriate to you
+\title{The Title Of The Dissertation}
+% No symbols, formulas, superscripts, or Greek letters are allowed
+% in your title.
+
+\author{Your Name Here}
+\degreeyear{2007}
+\degree{Doctor of Philosophy} 
+% Master's Degree theses will NOT be formatted properly with this
+% file.
+
+\field{Mathematics}
+\chair{Professor Chair Master}
+% Uncomment the next line iff you have a Co-Chair
+% \cochair{Professor Cochair Semimaster} 
+\othermembers{%  These must be alpha by last name.
+Professor Humor Less\\ 
+Professor Ironic Name\\
+Professor Cirius Thinker\\
+}
+\numberofmembers{5} % |chair| + |cochair| + |othermembers|
+
+\begin{frontmatter}
+\makefrontmatter % The title, copyright, and signature pages.
+
+%% DEDICATION
+% You have three choices here:
+%   1. Use the ``dedication'' environment.   Put in the text you want,
+%   and you'll get a perfectly respectable dedication page.
+%
+%   2. Use the ``mydedication'' environment.  If you don't like the
+%   formatting of option 1, use this environment and format things
+%   however you wish.
+%
+%   3. If you don't want a dedication, it's not required.
+
+
+\begin{dedication} % The style file will format this for you.
+  To two.
+\end{dedication}
+
+% \begin{mydedication} % You are responsible for formatting here.
+%   \vspace{1in}
+%   \begin{flushleft}
+% 	To me.
+%   \end{flushleft}
+%   
+%   \vspace{2in}
+%   \begin{center}
+% 	And you.
+%   \end{center}
+% 
+%   \vspace{2in}
+%   \begin{flushright}
+% 	Which equals us.
+%   \end{flushright}
+% \end{mydedication}
+
+
+%% EPIGRAPH
+%  The same choices that applied to the dedication apply here.
+
+\begin{epigraph} % The style file will position the text for you.
+  \emph{A careful quotation\\
+  conveys brilliance.}\\
+  ---Smarty Pants
+\end{epigraph}
+
+% \begin{myepigraph} % You position the text yourself.
+%   \vfil
+%   \begin{center}
+%     {\bf Think! It ain't illegal yet.}
+% 
+% 	\emph{---George Clinton}
+%   \end{center}
+% \end{myepigraph}
+
+\tableofcontents
+% \listoffigures  % Uncomment if you have any figures
+% \listoftables   % Uncomment if you have any tables
+
+
+%% ACKNOWLEDGEMENTS
+%  While technically optional, you probably have someone to thank.
+%  Also, a paragraph acknowledging all coauthors and publishers (if
+%  you have any) is required in the acknowledgements page and as the
+%  last paragraph of text at the end of each respective chapter. See
+%  the OGS Formatting Manual for more information.
+
+\begin{acknowledgements} 
+ Thanks to whoever deserves credit for Blacks Beach, Porters Pub, and
+ every coffee shop in San Diego. 
+
+ Thanks also to hottubs.
+\end{acknowledgements}
+
+
+%% VITA
+%  A brief vita is required in a doctoral thesis. See the OGS
+%  Formatting Manual for more information.
+\begin{vitapage}
+\begin{vita}
+  \item[2002] B.~S. in Mathematics \emph{cum laude}, University of Southern North Dakota, Hoople
+  \item[2002-2007] Graduate Teaching Assistant, University of California, San Diego
+  \item[2007] Ph.~D. in Mathematics, University of California, San Diego 
+\end{vita}
+\begin{publications}
+  \item Your Name, ``A Simple Proof Of The Riemann Hypothesis'', \emph{Annals of Math}, 314, 2007.
+  \item Your Name, Euclid, ``There Are Lots Of Prime Numbers'', \emph{Journal of Primes}, 1, 300
+	B.C.
+\end{publications}
+\end{vitapage}
+
+%% Abstract
+% There does not seem to be a maximum length. From the OGS Formatting
+% Manual: ``The abstract may continue on to a second page.''
+
+\begin{abstract}
+  This dissertation will be abstract. 
+\end{abstract}
+\end{frontmatter}
+
+
+%% DISSERTATION
+
+% A common strategy here is to include files for each of the chapters. I.e.,
+%   \include{chapter1.tex}
+%   \include{chapter2.tex}
+% etc.  Of course, if you prefer, you can just start with
+%   \chapter{My First Chapter Name}
+% and start typing away.  
+\chapter{Just a Test}
+This is only a test.
+\section{A section}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla odio
+sem, bibendum ut, aliquam ac, facilisis id, tellus. Nam posuere pede
+sit amet ipsum. Etiam dolor. In sodales eros quis pede.  Quisque sed
+nulla et ligula vulputate lacinia. In venenatis, ligula id semper
+feugiat, ligula odio adipiscing libero, eget mollis nunc erat id orci.
+Nullam ante dolor, rutrum eget, vestibulum euismod, pulvinar at, nibh.
+In sapien. Quisque ut arcu. Suspendisse potenti. Cras consequat cursus
+nulla.
+\subsection{More Stuff}
+Blah
+
+\begin{figure}[h] 
+  \begin{center}*\end{center}
+    \caption{A figure of Vonnegut.\index{Vonnegut}} 
+\end{figure}
+
+\appendix
+\chapter{Final notes}
+  Remove me in case of abdominal pain.
+
+%% END MATTER
+% \printindex %% Uncomment to display the index
+% \nocite{}  %% Put any references that you want to include in the bib 
+%               but haven't cited in the braces.
+% \bibliographystyle{alpha}  %% This is just my personal favorite style. 
+%                              There are many others.
+% \bibliography{myrefs}  %% This looks for the bibliography in myrefs.bib 
+%                          which should be formatted as a bibtex file.
+\end{document}
+
