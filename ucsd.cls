@@ -1000,29 +1000,29 @@ University of California {\@campus}, \@degreeyear \par
 \addtolength{\@chapterlength}{2.6em} % Space between toc labels and values
 \fi
 %\def\l@chapter{\pagebreak[3]\vskip 1em plus 1pt \@dottedtocline{0}{0em}{1.5em}}
-\def\l@chapter{\pagebreak[3]\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\@chapterlength}}
+\def\l@chapter{\normalfont\pagebreak[3]\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\@chapterlength}}
 
-\def\l@section{\@dottedtocline{1}{\@chapterlength}{2.3em}}
+\def\l@section{\normalfont\@dottedtocline{1}{\@chapterlength}{2.3em}}
 
 \newlength{\@subsectionlength}
 \setlength{\@subsectionlength}{\@chapterlength}
 \addtolength{\@subsectionlength}{2.3em}
-\def\l@subsection{\@dottedtocline{2}{\@subsectionlength}{3.2em}}
+\def\l@subsection{\normalfont\@dottedtocline{2}{\@subsectionlength}{3.2em}}
 
 \newlength{\@subsubsectionlength}
 \setlength{\@subsubsectionlength}{\@chapterlength}
 \addtolength{\@subsubsectionlength}{5.5em}
-\def\l@subsubsection{\@dottedtocline{3}{\@subsubsectionlength}{4.1em}}
+\def\l@subsubsection{\normalfont\@dottedtocline{3}{\@subsubsectionlength}{4.1em}}
 
 \newlength{\@paragraphlength}
 \setlength{\@paragraphlength}{\@chapterlength}
 \addtolength{\@paragraphlength}{8.5em}
-\def\l@paragraph{\@dottedtocline{4}{\@paragraphlength}{5em}}
+\def\l@paragraph{\normalfont\@dottedtocline{4}{\@paragraphlength}{5em}}
 
 \newlength{\@subparagraphlength}
 \setlength{\@subparagraphlength}{\@chapterlength}
 \addtolength{\@subparagraphlength}{10.5em}
-\def\l@subparagraph{\@dottedtocline{5}{\@subparagraph}{6em}}
+\def\l@subparagraph{\normalfont\@dottedtocline{5}{\@subparagraph}{6em}}
 
 % LIST OF FIGURES
 %
@@ -1051,7 +1051,7 @@ University of California {\@campus}, \@degreeyear \par
 \newlength{\@figurelength}
 \settowidth{\@figurelength}{\figurename }
 \addtolength{\@figurelength}{2.8em} % Magic value, but consistent with the standard figure length
-\def\l@figure{\@dottedtocline{1}{0em}{\@figurelength}}
+\def\l@figure{\normalfont\@dottedtocline{1}{0em}{\@figurelength}}
 
 % LIST OF TABLES
 %
@@ -1085,7 +1085,7 @@ University of California {\@campus}, \@degreeyear \par
 \newlength{\@tablelength}
 \settowidth{\@tablelength}{\tablename }
 \addtolength{\@tablelength}{2.8em} % Magic value, but consistent with the standard table length
-\def\l@table{\@dottedtocline{1}{0em}{\@tablelength}}
+\def\l@table{\normalfont\@dottedtocline{1}{0em}{\@tablelength}}
 
 
 %    ****************************************
