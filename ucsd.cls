@@ -257,7 +257,7 @@ Class]
 \def\partname{Part}
 %             ~~~~
 % abstract environment:
-\def\abstractshortname{Abstract} % Used for TOC
+\def\abstractshortname{Abstract of the Dissertation} % Used for TOC
 \def\abstractlongname{Abstract of the Dissertation} % Used for Header
 %                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % dedication:
@@ -429,7 +429,7 @@ All rights reserved.}
 \vspace{\@approvalspace}
 \makebox[4in][l]{\parbox{3.5in}{\fmfont The dissertation of {\@author} 
 is approved, and it is acceptable in quality and form for publication 
-on microfilm: }}\\
+on microfilm and electronically: }}\\
 \begin{tabular*}{4in}[t]{r@{\extracolsep{\fill}}r}
 & \rule{0pt}{\@approvalspace} \\
 \hline
