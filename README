@@ -1,5 +1,4 @@
 This folder should contain:
-/
     template.tex - Primary Driver File
     ucsd.cls - LaTeX class file
     uct10.clo - Font files associated to LaTeX class file
@@ -8,12 +7,7 @@ This folder should contain:
 
 Instructions:
 You should copy all of the above files  to the directory in which you plan to work.
-Edit template.tex.  Instructions for use are contained in the comments.  You should
-not have a need to edit any other file.
 
+Bugs:
+Please report all bugs at http://code.google.com/p/ucsd-thesis/issues/list
 
-Good luck.
-
-Jason Bandlow & Ross Richardson - 8/31/2007
-
-Edited for test commit.
