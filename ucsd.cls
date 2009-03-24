@@ -1,84 +1,53 @@
-% UCSD Math Dissertation Class
-% Modification History:
-% 2008/05/13 V1.1:
-%   Table of Contents bug fix (JRB)
-%   Appendix space in toc (RMR)
 %
-% Summer 2007:
-%   Jason Bandlow       - JRB
-%   Ross Richardson     - RMR
-%
-%   The file as modified by Will Brockman (see below) was brought into compliance
-%   with current OGS guidelines.  This includes text spacing,
-%   adding ``Figure'' and ``Table'' to the TOF (TOL) entries,
-%   allowing for two Chapter headings,
-%   cleanup of frontmatter, compatibility with hyperref, compatibility
-%   with indexing, streamlining of template.
-%   Special thanks to John Farina for his initial fixes which prompted this
-%   release.
+% UCSD Dissertation Class
 %
 %   This file was originally based on the UC thesis template (see below
 %   for documentation on that document).  As a result, this file
 %   contains deprecated commentary, code, and options.  
-
-
-
-
-% UCSD DOCUMENT CLASS -- Release info is below. 
-% slight modifications by Will Brockman of ucthesis.cls 
-% fall 1997
+%
+% UCSD DOCUMENT CLASS
+%   Release info, modification history and author list below. 
+%
 % for LaTeX version 2e - 11/3/94
 %%% ====================================================================
 %%%  @LaTeX-class-file{
-%%%     filename       = "ucthesis.cls",
-%%%     version        = "3.0",
-%%%     date           = "31 October 1994",
-%%%	    portedby       = "Blaise B. Frederick",
-%%%     address        = "Center for Functional Imaging
-%%%	                      Lawrence Berkeley Laboratory
-%%%                       MS 55-121
-%%%                       1 Cyclotron Rd.
-%%%	           	          Berkeley, CA 94720
-%%%			              USA",
-%%%	    telephone       = "(510) 486-4423",
-%%%	    email           = "frederic@imasun.lbl.gov",
+%%%     filename       = "ucsd.cls",
+%%%     version        = "3.3",
+%%%
 %%%     codetable       = "ISO/ASCII",
-%%%     keywords        = "LaTeX, ucthesis",
-%%%     supported       = "until November 30, 1994",
+%%%     keywords        = "LaTeX, ucsd-thesis, ucsd, thesis",
+%%%
 %%%     docstring       = "This file is the main file for the ucthesis
-%%%            class, which is intended to meet the requirements
-%%%            for University of California Ph.D. dissertations.
-%%%			   It is a direct port to LaTeX2e from UCTHESIS
-%%%			   v2.7 by Ethan V. Munson, with no changes other 
-%%%			   than those for compatibility.  The major modifictions
-%%%			   are in the font selection commands in the option
-%%%			   files uct1x.clo.
+%%%                        class, which is intended to meet the requirements
+%%%                        for University of California San Diego 
+%%%                        Ph.D. dissertations.",
+%%%  
 %%%			   
-%%%			   UCTHESIS.STY v2.7 is based on the standard
+%%%                    UCTHESIS.STY v2.7 is based on the standard
 %%%			   report.sty as modified by Mittelbach and Schopf in
 %%%			   Jan 1992.  The primary differences are (1) the use
 %%%			   of pseudo-double-spacing, except in certain special
-%%%            environments; and (2) the use of a 6 inch line
-%%%            with 4em paragraph indentation.  It is only
+%%%                        environments; and (2) the use of a 6 inch line
+%%%                        with 0.5'' paragraph indentation.  It is only
 %%%			   intended for single-sided printing.  Double-sided
 %%%			   printing may be possible, but you're on
 %%%			   your own.
 %%%
-%%%            I know of no bugs in this implementation,
-%%%            but would be happy to hear of any problems
-%%%            that arise with it.
+%%%                        I know of no bugs in this implementation,
+%%%                        but would be happy to hear of any problems
+%%%                        that arise with it.
 %%%
-%%%			   Version 2.x fixes a bug in the previous
+%%%                    Version 2.x fixes a bug in the previous
 %%%			   version of 20 Jun 1988.  The bug was that 
 %%%			   "draft" optional mode didn't work because of
 %%%			   problems in handling optional arguments.
-%%%            This file does not seem to work with earlier 
-%%%            versions of LaTeX (pre-Jan 1992).
+%%%                        This file does not seem to work with earlier 
+%%%                        versions of LaTeX (pre-Jan 1992).
 %%%
-%%%			   Version 2.3 includes a single-spaced 
+%%%                    Version 2.3 includes a single-spaced 
 %%%			   tabular* environment.
 %%%			
-%%%			   Version 2.4 sets \evensidemargin correctly
+%%%                    Version 2.4 sets \evensidemargin correctly
 %%%			   for two-sided style.  It also adds new
 %%%			   environments (\smalltabular and
 %%%			   \scriptsizetabular) which produce tables
@@ -86,20 +55,38 @@
 %%%			   of producing small-font tables don't work
 %%%			   in ucthesis style.
 %%%
-%%%			   Version 2.5 adds support for the \maketitle
+%%%                    Version 2.5 adds support for the \maketitle
 %%%			   macro.
 %%%
-%%%			   Version 2.6 adds support for complete and
+%%%                    Version 2.6 adds support for complete and
 %%%			   correct front matter.  Some dead code was
 %%%			   removed, too.
 %%%
-%%%            Version 2.7 adds front matter support for
-%%%            thesis committees of more than 3 people
-%%%            and for a labeled signature line on the
-%%%            abstract page.
+%%%                    Version 2.7 adds front matter support for
+%%%                        thesis committees of more than 3 people
+%%%                        and for a labeled signature line on the
+%%%                        abstract page.
 %%%
-%%%			   Version 3.0 is a direct port of version 2.7
-%%%			   to LaTeX2e.  The major revisions in ucthesis.cls
+%%%                    Version 3.0 - 1994-10-31
+%%%                        Blaise B. Frederick
+%%%
+%%%                            Center for Functional Imaging
+%%%	                         Lawrence Berkeley Laboratory
+%%%                            MS 55-121
+%%%                            1 Cyclotron Rd.
+%%%	           	       Berkeley, CA 94720
+%%%			       USA
+%%%
+%%%	                   (510) 486-4423
+%%%	                   frederic@imasun.lbl.gov
+%%%
+%%%                        Supported until November 30, 1994
+%%%
+%%%                        A direct port to LaTeX2e from UCTHESIS
+%%%			   v2.7 by Ethan V. Munson, with no changes other 
+%%%			   than those for compatibility. 
+%%%
+%%%                        The major revisions in ucthesis.cls
 %%%			   are converting option processing to LaTeX2e 
 %%%			   conventions.  The uct1x files have been revised
 %%%			   to use the new font selection commands.
@@ -117,12 +104,56 @@
 %%%			   and \markboth if you use \part.  The solution
 %%%			   is to get the headerfooter style, which is
 %%%			   nice and simple to use."
+%%%
+%%%			    
+%%%                    Version 3.1 2008/05/13:
+%%%			   Jason Bandlow       - JRB
+%%%			   Ross Richardson     - RMR
+%%%	
+%%%			   The file as modified by Will Brockman (see below) 
+%%%                        was brought into compliance with current OGS guidelines.  
+%%%                        This includes text spacing,
+%%%			   adding ``Figure'' and ``Table'' to the TOF (TOL) entries,
+%%%			   allowing for two Chapter headings,
+%%%			   cleanup of frontmatter, compatibility with hyperref,
+%%%                        compatibility with indexing, 
+%%%			   streamlining of template.
+%%%			   Special thanks to John Farina for his initial fixes 
+%%%                        which prompted this release.
+%%%
+%%%			   Table of Contents bug fix (JRB)
+%%%			   Appendix space in toc (RMR)
+%%%
+%%%
+%%%                   Version 3.2 2009/02/23
+%%%                        Diwaker Gupta <diwaker@floatingsun.net>
+%%%
+%%%                        Brought into compliance with 
+%%%                          OGS guidelines as of Nov 03 2008.
+%%%                        Modified template with additional information.
+%%%                        Honor user specified fonts in TOC/LOT/LOF.
+%%%                        Suppress warning when using the subfig package.
+%%%                        Add note about hyperref not working in draft mode.
+%%%                                                                    
+%%%                        
+%%%                   Version 3.3 2009/03/23
+%%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
+%%%
+%%%                        Brought into compliance with 
+%%%                          OGS guidelines as of 2009/03/19.
+%%%                          Passed the ruler lady on 2009/03/19.
+%%%                        Letter page size now default, will reject other page sizes.
+%%%                        Abstract indented properly.
+%%%                        Indentations are of the correct size (0.5'').
+%%%                        Extra page after Abstract removed.
+%%%                        Reformatted revision history.
+%%%
 %%%  }
 %%% ====================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2008/05/13 V1.1 University of California, San Diego, Mathematics Dissertation
-Class]
+\ProvidesClass{ucsd}[2009/03/23 V3.3 University of California, San Diego, Dissertation Class]
+
 
 %    ****************************************
 %    *               OPTIONS                *
