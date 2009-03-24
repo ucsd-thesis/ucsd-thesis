@@ -590,6 +590,10 @@ on microfilm and electronically: }}\\
 % of the rest of the dissertation in Arabic.  It requires definition
 % of the \title, \author, \degreetitle, \field, \campus, and \chair macros.
 % The page numbering is in the usual sequence for UCSD OGS--WBB.
+%
+% The OGS manual states that the top margin should be 2.5", however
+% it gives examples where this is not the case, and
+% this extra margin is not required (as of 2009/03/29) (novi).
 
 % addcontentsline line moved to fix TOC bug.  (JRB, 5-5-08)
 \def\abstract{ 
@@ -612,10 +616,12 @@ University of California {\@campus}, \@degreeyear \par
 {\@chair}, Chair}
 \vspace{.1in}
 \end{center}
-\addcontentsline{toc}{chapter}{\protect\numberline{}\abstractshortname}%
+\addcontentsline{toc}{chapter}{\protect\numberline{}\abstractshortname}
+\par
 }
 
-\def\endabstract{\par\vfil\null\end{alwayssingle}
+
+\def\endabstract{\par\vfil\end{alwayssingle}
 }
 
 
