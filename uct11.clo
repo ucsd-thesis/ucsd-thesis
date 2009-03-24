@@ -1,5 +1,13 @@
 % UCTHESIS DOCUMENT CLASS OPTION-- uct11.clo 11/3/94
 %    for LaTeX version 2e
+%
+%%% ====================================================================
+% Revised:
+%   (Revision details are in ucsd.cls)
+%
+%   2009/03/23 - Novimir Pablant 
+%%% ====================================================================
+
 
 % The low-level typographic details for the UCSD thesis
 % file are found here (e.g. font selection, spacing, margins).  
@@ -202,7 +210,7 @@
 %
 \parskip 0pt plus 1pt              % Extra vertical space between
                                    % paragraphs.
-\parindent 4em                     % Width of paragraph indentation.
+\parindent 0.5in                   % Width of paragraph indentation.
 %\topsep 9pt plus 3pt minus 5pt    % Extra vertical space, in addition
                                    % to \parskip, added above and below
                                    % list and paragraphing environments.
