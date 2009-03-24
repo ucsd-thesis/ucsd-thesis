@@ -5,6 +5,11 @@
 % Doctoral Dissertations and Masters Theses for 20**'', where 20** is 
 % the year of your graduation, for officiation preparations guidelines.
 %
+% Note: The ucsd.cls class files are only valid for doctoral dissertations.
+%
+% This template and class file were valid as of 2009/03/19.
+%
+% ----------------------------------------------------------------------
 % If you desire more control, please see the attached files:
 %   * ucsd.cls -- Class file
 %   * uct10.clo, uct11.clo, uct12.clo -- Configuration files for font sizes 10pt,11pt,12pt
@@ -13,7 +18,9 @@
 %   2008/05/13 -  Original file adapted from brockman.tex by JRB and RMR
 %                 to work with ucsd.cls
 %   
-
+%
+%   2009/03/23 - Frontmatter moved to a separate file.  
+%                Comments added throughout.
 
 \documentclass[12pt,chapterheads]{ucsd}
 % documentclass options: default is 11pt, oneside, final.
@@ -23,185 +30,87 @@
 %                       and places a black box at every overfull hbox 
 %                       (check these before submission).
 % chapterheads -- include this if you want your chapters to read:
-% Chapter 1
-% Title of Chapter
+%                 Chapter 1
+%                 Title of Chapter
 %
-% instead of
+%                 instead of
 %
-% 1 Title of Chapter
+%                 1 Title of Chapter
 
 
-% Include all packages you need here.  Some standard options are suggested below.
+% Include all packages you need here.  
+% Some standard options are suggested below.
 
 
-%% AMS PACKAGES - Chances are you will want some or all of these if writing a math dissertation.
-% \usepackage{amsmath, amscd, amssymb, amsthm}
+%% AMS PACKAGES - Chances are you will want some or all 
+%    of these if writing a math dissertation.
+%  \usepackage{amsmath, amscd, amssymb, amsthm}
 
-%% GRAPHICX - This is the standard package for including graphics for latex/pdflatex.
-% \usepackage{graphicx}
+%% GRAPHICX - This is the standard package for 
+%    including graphics for latex/pdflatex.
+%  \usepackage{graphicx}
+
+%% SUBFIGURE - Use this to place multiple images in a
+%    single figure.  Subfigure will handle placement and
+%    proper captioning (e.g. Figure 1.2(a))
+% \usepackage{subfigure}
 
 %% LATIN MODERN FONTS (replacements for Computer Modern)
 % \usepackage{lmodern}
 % \usepackage[T1]{fontenc}
 
 %% INDEX
-% Uncomment the following two lines to create an index: 
+%   Uncomment the following two lines to create an index: 
 % \usepackage{makeidx}
 % \makeindex
-% You will need to uncomment the \printindex line near the
-% bibliography to display the index.  Use the command
-% \index{keyword} within the text to create an entry in the index
-% for keyword.
+%   You will need to uncomment the \printindex line near the
+%   bibliography to display the index.  Use the command
+% \index{keyword} 
+%   within the text to create an entry in the index for keyword.
 
 %% HYPERLINKS
-% To create a PDF with hyperlinks, you need to include the hyperref package.
-% THIS HAS TO BE THE LAST PACKAGE INCLUDED!
-% Note that the options plainpages=false and pdfpagelabels exist
-% to fix indexing associated with having both (ii) and (2) as pages.
-% Also, all links must be black according to OGS.
-% See: http://www.tex.ac.uk/cgi-bin/texfaq2html?label=hyperdupdest
-% Note: This may not work correctly with all DVI viewers (i.e. Yap breaks).
-% NOTE: hyperref will NOT work in draft mode, as noted above.
-% \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=black, citecolor=black, urlcolor=black,plainpages=false,pdfpagelabels]{hyperref}
-% \hypersetup{ pdfauthor = {Your Name Here}, pdftitle = {The Title of The Dissertation}, pdfkeywords = {Keywords for Searching}, pdfcreator = {pdfLaTeX with hyperref package}, pdfproducer = {pdfLaTeX}}
+%   To create a PDF with hyperlinks, you need to include the hyperref package.
+%   THIS HAS TO BE THE LAST PACKAGE INCLUDED!
+%   Note that the options plainpages=false and pdfpagelabels exist
+%   to fix indexing associated with having both (ii) and (2) as pages.
+%   Also, all links must be black according to OGS.
+%   See: http://www.tex.ac.uk/cgi-bin/texfaq2html?label=hyperdupdest
+%   Note: This may not work correctly with all DVI viewers (i.e. Yap breaks).
+%   NOTE: hyperref will NOT work in draft mode, as noted above.
+% \usepackage[colorlinks=true, pdfstartview=FitV, 
+%             linkcolor=black, citecolor=black, 
+%             urlcolor=black, plainpages=false,
+%             pdfpagelabels]{hyperref}
+% \hypersetup{ pdfauthor = {Your Name Here}, 
+%              pdftitle = {The Title of The Dissertation}, 
+%              pdfkeywords = {Keywords for Searching}, 
+%              pdfcreator = {pdfLaTeX with hyperref package}, 
+%              pdfproducer = {pdfLaTeX} }
+
 
 \begin{document}
 
-%% REQUIRED FIELDS -- Replace with the values appropriate to you
 
-% No symbols, formulas, superscripts, or Greek letters are allowed
-% in your title.
-\title{The Title Of The Dissertation}
 
-\author{Your Name Here}
-\degreeyear{2009}
-
-% Master's Degree theses will NOT be formatted properly with this
-% file.
-\degreetitle{Doctor of Philosophy} 
-
-\field{Mathematics}
-\chair{Professor Chair Master}
-% Uncomment the next line iff you have a Co-Chair
-% \cochair{Professor Cochair Semimaster} 
-
-%  The rest of the committee members  must be alphabetized by last name.
-\othermembers{
-Professor Humor Less\\ 
-Professor Ironic Name\\
-Professor Cirius Thinker\\
-}
-\numberofmembers{5} % |chair| + |cochair| + |othermembers|
-
-\begin{frontmatter}
-\makefrontmatter % The title, copyright, and signature pages.
-
-%% DEDICATION
-% You have three choices here:
-%   1. Use the ``dedication'' environment.   Put in the text you want,
-%   and you'll get a perfectly respectable dedication page.
+%% FRONT MATTER
 %
-%   2. Use the ``mydedication'' environment.  If you don't like the
-%   formatting of option 1, use this environment and format things
-%   however you wish.
-%
-%   3. If you don't want a dedication, it's not required.
-
-
-% The style file will format this for you.
-\begin{dedication} 
-  To two, the loneliest number since the number one.
-\end{dedication}
-
-% \begin{mydedication} % You are responsible for formatting here.
-%   \vspace{1in}
-%   \begin{flushleft}
-% 	To me.
-%   \end{flushleft}
-%   
-%   \vspace{2in}
-%   \begin{center}
-% 	And you.
-%   \end{center}
-% 
-%   \vspace{2in}
-%   \begin{flushright}
-% 	Which equals us.
-%   \end{flushright}
-% \end{mydedication}
+%  All of the front matter.
+%  This includes the title, degree, dedication, vita, abstract, etc..
+%  Modify the file template_frontmatter.tex to change these pages.
+\include{template_frontmatter}
 
 
 
-%% EPIGRAPH
-%  The same choices that applied to the dedication apply here.
-\begin{epigraph} % The style file will position the text for you.
-  \emph{A careful quotation\\
-  conveys brilliance.}\\
-  ---Smarty Pants
-\end{epigraph}
-
-% \begin{myepigraph} % You position the text yourself.
-%   \vfil
-%   \begin{center}
-%     {\bf Think! It ain't illegal yet.}
-% 
-% 	\emph{---George Clinton}
-%   \end{center}
-% \end{myepigraph}
-
-
-\tableofcontents
-% \listoffigures  % Uncomment if you have any figures
-% \listoftables   % Uncomment if you have any tables
-
-
-
-%% ACKNOWLEDGEMENTS
-%  While technically optional, you probably have someone to thank.
-%  Also, a paragraph acknowledging all coauthors and publishers (if
-%  you have any) is required in the acknowledgements page and as the
-%  last paragraph of text at the end of each respective chapter. See
-%  the OGS Formatting Manual for more information.
-\begin{acknowledgements} 
- Thanks to whoever deserves credit for Blacks Beach, Porters Pub, and
- every coffee shop in San Diego. 
-
- Thanks also to hottubs.
-\end{acknowledgements}
-
-
-%% VITA
-%  A brief vita is required in a doctoral thesis. See the OGS
-%  Formatting Manual for more information.
-\begin{vitapage}
-\begin{vita}
-  \item[2002] B.~S. in Mathematics \emph{cum laude}, University of Southern North Dakota, Hoople
-  \item[2002-2007] Graduate Teaching Assistant, University of California, San Diego
-  \item[2007] Ph.~D. in Mathematics, University of California, San Diego 
-\end{vita}
-\begin{publications}
-  \item Your Name, ``A Simple Proof Of The Riemann Hypothesis'', \emph{Annals of Math}, 314, 2007.
-  \item Your Name, Euclid, ``There Are Lots Of Prime Numbers'', \emph{Journal of Primes}, 1, 300
-	B.C.
-\end{publications}
-\end{vitapage}
-
-
-%% Abstract
-% Doctoral dissertation abstracts should not exceed 350 words. MS thesis
-% abstracts can be up to 250 words. The abstract may, however, continue to a
-% second page if necessary.
-\begin{abstract}
-  This dissertation will be abstract. 
-\end{abstract}
-\end{frontmatter}
 
 
 %% DISSERTATION
 
 % A common strategy here is to include files for each of the chapters. I.e.,
-%   \include{chapter1.tex}
-%   \include{chapter2.tex}
+% Place the chapters is separate files: 
+%   chapter1.tex, chapter2.tex
+% Then use the commands:
+%   \include{chapter1}
+%   \include{chapter2}
 % etc.  Of course, if you prefer, you can just start with
 %   \chapter{My First Chapter Name}
 % and start typing away.  
@@ -220,13 +129,19 @@ nulla.
 Blah
 
 \begin{figure}[h] 
-  \begin{center}*\end{center}
-    \caption{A figure of Vonnegut.\index{Vonnegut}} 
+  \centering
+  \caption{A figure of Vonnegut.\index{Vonnegut}} 
 \end{figure}
+
+
 
 \appendix
 \chapter{Final notes}
   Remove me in case of abdominal pain.
+
+
+
+
 
 %% END MATTER
 % \printindex %% Uncomment to display the index

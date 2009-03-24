@@ -1,5 +1,6 @@
 This folder should contain:
     template.tex - Primary Driver File
+    template_frontmatter.tex - Where the title, abstract, etc. are held.
     ucsd.cls - LaTeX class file
     uct10.clo - Font files associated to LaTeX class file
     uct11.clo
