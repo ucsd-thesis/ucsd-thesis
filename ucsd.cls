@@ -301,7 +301,7 @@ Class]
 \def\degreeyear#1{\gdef\@degreeyear{#1}}
 
 % The full (unabbreviated) name of the degree
-\def\degree#1{\gdef\@degree{#1}}
+\def\degreetitle#1{\gdef\@degreetitle{#1}}
 
 % The name of your committee's chair
 \def\chair#1{\gdef\@chair{#1}}
@@ -384,7 +384,7 @@ Class]
 	\smallskip
     requirements for the degree \par 
 	\smallskip
-    {\@degree} \par
+    {\@degreetitle} \par
     \bigskip \medskip
     in \par
     \bigskip \medskip
@@ -588,7 +588,7 @@ on microfilm and electronically: }}\\
 % The ABSTRACT environment allows for multi-page abstracts which,
 % in accordance with UC rules, is numbered separately from the rest
 % of the rest of the dissertation in Arabic.  It requires definition
-% of the \title, \author, \degree, \field, \campus, and \chair macros.
+% of the \title, \author, \degreetitle, \field, \campus, and \chair macros.
 % The page numbering is in the usual sequence for UCSD OGS--WBB.
 
 % addcontentsline line moved to fix TOC bug.  (JRB, 5-5-08)
@@ -605,7 +605,7 @@ on microfilm and electronically: }}\\
 by\par
 \vspace{.1in}
 \@author\par
-{\@degree} in \@field\par
+{\@degreetitle} in \@field\par
 \vspace{.1in}
 University of California {\@campus}, \@degreeyear \par
 \vspace{.1in}
