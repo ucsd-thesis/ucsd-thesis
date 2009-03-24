@@ -1,4 +1,4 @@
-% UCSD Mathematics Dissertation Template
+% UCSD Doctoral Dissertation Template
 %
 % Please read the comments in this file and make appropriate edits.
 % NOTE: Always refer to the ``Preperation and Submission Manual for 
@@ -10,8 +10,9 @@
 %   * uct10.clo, uct11.clo, uct12.clo -- Configuration files for font sizes 10pt,11pt,12pt
 %
 % CHANGELOG:
-%   * Original file adapted from brockman.tex by JRB and RMR
-%     to work with ucsd.cls
+%   2008/05/13 -  Original file adapted from brockman.tex by JRB and RMR
+%                 to work with ucsd.cls
+%   
 
 
 \documentclass[12pt,chapterheads]{ucsd}
@@ -19,7 +20,8 @@
 % fonts: 10pt, 11pt, 12pt -- are valid for UCSD dissertations.
 % sides: oneside, twoside -- note that two-sided theses are not accepted by OGS
 % mode: draft, final -- draft mode switches to single spacing, removes hyperlinks,
-%                       and places a black box at every overfull hbox (check these before submission).
+%                       and places a black box at every overfull hbox 
+%                       (check these before submission).
 % chapterheads -- include this if you want your chapters to read:
 % Chapter 1
 % Title of Chapter
@@ -30,15 +32,6 @@
 
 
 % Include all packages you need here.  Some standard options are suggested below.
-
-% GEOMETRY - This will force the use of Letter paper.
-% Many TeX installations default to A4 paper.  The formatting
-% of the thesis class file requires Letter, else the margins
-% will be wrong when you go to print it (and OGS will complain).
-% If your TeX implementation is not setup for Letter paper, and
-% you cannot change it, uncommenting the following line may fix 
-% problem.
-% \usepackage[paper=letterpaper]{geometry}
 
 
 %% AMS PACKAGES - Chances are you will want some or all of these if writing a math dissertation.
@@ -75,21 +68,25 @@
 \begin{document}
 
 %% REQUIRED FIELDS -- Replace with the values appropriate to you
-\title{The Title Of The Dissertation}
+
 % No symbols, formulas, superscripts, or Greek letters are allowed
 % in your title.
+\title{The Title Of The Dissertation}
 
 \author{Your Name Here}
-\degreeyear{2007}
-\degree{Doctor of Philosophy} 
+\degreeyear{2009}
+
 % Master's Degree theses will NOT be formatted properly with this
 % file.
+\degreetitle{Doctor of Philosophy} 
 
 \field{Mathematics}
 \chair{Professor Chair Master}
 % Uncomment the next line iff you have a Co-Chair
 % \cochair{Professor Cochair Semimaster} 
-\othermembers{%  These must be alpha by last name.
+
+%  The rest of the committee members  must be alphabetized by last name.
+\othermembers{
 Professor Humor Less\\ 
 Professor Ironic Name\\
 Professor Cirius Thinker\\
@@ -111,8 +108,9 @@ Professor Cirius Thinker\\
 %   3. If you don't want a dedication, it's not required.
 
 
-\begin{dedication} % The style file will format this for you.
-  To two.
+% The style file will format this for you.
+\begin{dedication} 
+  To two, the loneliest number since the number one.
 \end{dedication}
 
 % \begin{mydedication} % You are responsible for formatting here.
@@ -133,9 +131,9 @@ Professor Cirius Thinker\\
 % \end{mydedication}
 
 
+
 %% EPIGRAPH
 %  The same choices that applied to the dedication apply here.
-
 \begin{epigraph} % The style file will position the text for you.
   \emph{A careful quotation\\
   conveys brilliance.}\\
@@ -151,9 +149,11 @@ Professor Cirius Thinker\\
 %   \end{center}
 % \end{myepigraph}
 
+
 \tableofcontents
 % \listoffigures  % Uncomment if you have any figures
 % \listoftables   % Uncomment if you have any tables
+
 
 
 %% ACKNOWLEDGEMENTS
@@ -162,7 +162,6 @@ Professor Cirius Thinker\\
 %  you have any) is required in the acknowledgements page and as the
 %  last paragraph of text at the end of each respective chapter. See
 %  the OGS Formatting Manual for more information.
-
 \begin{acknowledgements} 
  Thanks to whoever deserves credit for Blacks Beach, Porters Pub, and
  every coffee shop in San Diego. 
@@ -187,11 +186,11 @@ Professor Cirius Thinker\\
 \end{publications}
 \end{vitapage}
 
+
 %% Abstract
 % Doctoral dissertation abstracts should not exceed 350 words. MS thesis
 % abstracts can be up to 250 words. The abstract may, however, continue to a
 % second page if necessary.
-
 \begin{abstract}
   This dissertation will be abstract. 
 \end{abstract}
