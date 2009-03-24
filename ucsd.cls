@@ -143,6 +143,21 @@ Class]
 \DeclareOption{chapterheads}{\renewcommand\@chapterheadsmark{1}} % RMR - Toggle how chapters are listed
 \ExecuteOptions{11pt,oneside,final}
 
+% Letter size (8.5"" x 11") is required for UCSD. Do not allow any other size.
+\DeclareOption{landscape}
+   {\ClassWarning{thesis}{Option 'landscape' not available for thesis.}}
+\DeclareOption{legalpaper}
+   {\ClassWarning{thesis}{Option 'legalpaper' not available for thesis.}}
+\DeclareOption{a4paper}
+   {\ClassWarning{thesis}{Option 'a4paper' not available for this class.}}
+\DeclareOption{a5paper}
+   {\ClassWarning{thesis}{Option 'a5paper' not available for this class.}}
+\DeclareOption{executivepaper}
+   {\ClassWarning{thesis}{Option 'executivepaper' not available.}}
+\DeclareOption{b5paper}
+   {\ClassWarning{thesis}{Option 'b5paper' not available for this class.}}
+\DeclareOption{letterpaper}
+   {\ClassWarning{thesis}{Option 'letterpaper' superfluous. Ignored.}}
 
 % CHOOSING THE TYPE SIZE:
 %
@@ -183,6 +198,10 @@ Class]
 \ProcessOptions
 
 \input uct1\@ptsize.clo\relax
+
+% Set the paper size to letter
+\setlength{\paperheight}{11.0in}
+\setlength{\paperwidth}{8.5in}
 
 % \smallssp is used to produce tabular environments in the small font.
 % This is required because single-spacing requires a change in font size.
