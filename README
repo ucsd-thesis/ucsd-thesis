@@ -7,8 +7,23 @@ This folder should contain:
     uct12.clo
 
 Instructions:
-You should copy all of the above files  to the directory in which you plan to work.
+  You should copy all of the above files to the directory in which you plan to work.  
+  Start by looking over the template.
+
+Warning:
+  This template has not endorced by OGS or any other official entity.
+  The official formatting guide can be obtained from OGS.
+  It can be found on the web here:
+  http://ogs.ucsd.edu/AcademicAffairs/Documents/Dissertations_Theses_Formatting_Manual.pdf
+
+  No guaranty is made that this LaTeX class conforms to the official UCSD guidelines.
+  Make sure that you check the final document against the Formatting Manual.
+  
+  That being said, this class has been used successfully for publication of 
+  doctoral theses.  
+
+  The last successful known use of this LaTeX class was on 2009/03/19.  
 
 Bugs:
-Please report all bugs at http://code.google.com/p/ucsd-thesis/issues/list
+  Please report all bugs at http://code.google.com/p/ucsd-thesis/issues/list
 
