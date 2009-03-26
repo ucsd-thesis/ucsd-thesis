@@ -171,24 +171,26 @@
 \DeclareOption{twoside}{\@twosidetrue  \@mparswitchtrue}  
 \DeclareOption{draft}{\renewcommand\@draftmark{1}}
 \DeclareOption{final}{\renewcommand\@draftmark{0}}
-\DeclareOption{chapterheads}{\renewcommand\@chapterheadsmark{1}} % RMR - Toggle how chapters are listed
-\ExecuteOptions{11pt,oneside,final}
+% RMR - Toggle how chapters are listed
+\DeclareOption{chapterheads}{\renewcommand\@chapterheadsmark{1}} 
 
 % Letter size (8.5"" x 11") is required for UCSD. Do not allow any other size.
 \DeclareOption{landscape}
-   {\ClassWarning{thesis}{Option 'landscape' not available for thesis.}}
+   {\ClassWarning{ucsd}{Paper orientation 'landscape' not valid for ucsd thesis.}}
 \DeclareOption{legalpaper}
-   {\ClassWarning{thesis}{Option 'legalpaper' not available for thesis.}}
+   {\ClassWarning{ucsd}{Paper size 'legalpaper' not valid for ucsd thesis.}}
 \DeclareOption{a4paper}
-   {\ClassWarning{thesis}{Option 'a4paper' not available for this class.}}
+   {\ClassWarning{ucsd}{Paper size 'a4paper' not valid for ucsd thesis.}}
 \DeclareOption{a5paper}
-   {\ClassWarning{thesis}{Option 'a5paper' not available for this class.}}
+   {\ClassWarning{ucsd}{Paper size 'a5paper' not valid for ucsd thesis.}}
 \DeclareOption{executivepaper}
-   {\ClassWarning{thesis}{Option 'executivepaper' not available.}}
+   {\ClassWarning{ucsd}{Paper size 'executivepaper' not valid for ucsd thesis..}}
 \DeclareOption{b5paper}
-   {\ClassWarning{thesis}{Option 'b5paper' not available for this class.}}
+   {\ClassWarning{ucsd}{Paper size 'b5paper' not valid for ucsd thesis.}}
 \DeclareOption{letterpaper}
-   {\ClassWarning{thesis}{Option 'letterpaper' superfluous. Ignored.}}
+   {\ClassWarning{ucsd}{Paper size 'letterpaper' superfluous. Ignored.}}
+
+\ExecuteOptions{11pt,oneside,final}
 
 % CHOOSING THE TYPE SIZE:
 %
