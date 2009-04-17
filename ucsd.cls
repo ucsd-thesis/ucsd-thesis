@@ -148,11 +148,18 @@
 %%%                        Extra page after Abstract removed.
 %%%                        Reformatted revision history.
 %%%
+%%%                   Version 3.4 2009/03/23
+%%%                        David Collins
+%%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
+%%%                        
+%%%                        Added the co-chair to the abstract page.
+%%%
+%%%
 %%%  }
 %%% ====================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2009/03/23 V3.3 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2009/03/23 V3.4 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
@@ -630,27 +637,35 @@ on microfilm and electronically: }}\\
 
 % addcontentsline line moved to fix TOC bug.  (JRB, 5-5-08)
 \def\abstract{ 
-\phantomsection
-\begin{alwayssingle}
-\begin{center}
-{\fmfont
-{\expandafter\uppercase\expandafter{\abstractlongname}}\par
-\vspace{.5in}
-    {\bfseries
-     {\@title} \par}
-\vspace{.1in}
-by\par
-\vspace{.1in}
-\@author\par
-{\@degreetitle} in \@field\par
-\vspace{.1in}
-University of California {\@campus}, \@degreeyear \par
-\vspace{.1in}
-{\@chair}, Chair}
-\vspace{.1in}
-\end{center}
-\addcontentsline{toc}{chapter}{\protect\numberline{}\abstractshortname}
-\par
+  \phantomsection
+  \begin{alwayssingle}
+  \begin{center}
+  {\fmfont
+  {\expandafter\uppercase\expandafter{\abstractlongname}}\par
+  \vspace{.5in}
+  {\bfseries
+    {\@title} \par}
+  \vspace{.1in}
+  by\par
+  \vspace{.1in}
+  \@author\par
+  {\@degreetitle} in \@field\par
+  \vspace{.1in}
+  University of California {\@campus}, \@degreeyear \par
+  \vspace{.1in}
+  {\@chair}, Chair
+  \vspace{.1in}
+  %Check if there is a co-chair and add accordingly.
+  \ifx\@cochair\@isnotdefined 
+  \else
+    \par
+    {\@cochair}, Co-Chair
+    \vspace{.1in}
+  \fi
+  } % Closes fmfont above
+  \end{center}
+  \addcontentsline{toc}{chapter}{\protect\numberline{}\abstractshortname}
+  \par
 }
 
 
