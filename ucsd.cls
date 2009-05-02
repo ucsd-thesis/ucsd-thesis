@@ -327,6 +327,8 @@
 \def\acknowledgename{Acknowledgements}
 %                    ~~~~~~~~~~~~~~~~
 
+\def\UCSD@text@chair{Chair}
+\def\UCSD@text@cochair{Co-Chair}
 %    ****************************************
 %    *             FRONT MATTER             *
 %    ****************************************
@@ -344,10 +346,18 @@
 \def\degreetitle#1{\gdef\@degreetitle{#1}}
 
 % The name of your committee's chair
-\def\chair#1{\gdef\@chair{#1}}
+\def\chair#1{\gdef\UCSD@chair{#1}}
 
 % The name of your committee's cochair, if applicable
-\def\cochair#1{\gdef\@cochair{#1}}
+\def\cochair#1{\gdef\UCSD@cochair{#1}}
+
+% The names of your committee's equal co-chairs 
+% (if applicable, and use this instead of chair and cochair)
+\def\cochairs#1#2{
+  \gdef\UCSD@cochairs{true}
+  \gdef\UCSD@chair{#1}
+  \gdef\UCSD@cochair{#2}
+  \let\UCSD@text@chair\UCSD@text@cochair}
 
 % The names of your other committe members, one per line,
 % sorted alphabetically by last name.
@@ -439,9 +449,9 @@
     \fmsmallfont
     Committee in charge:
     \begin{quote}
-       {\@chair}, Chair\newline
-       \ifx\@cochair\@isnotdefined \else%
-	     {\@cochair}, Co-Chair\newline\fi
+       {\UCSD@chair}, \UCSD@text@chair\newline
+       \ifx\UCSD@cochair\@isnotdefined \else%
+	     {\UCSD@cochair}, \UCSD@text@cochair\newline\fi
        {\@othermembers}
     \end{quote}
     \begin{center}
@@ -493,41 +503,43 @@ on microfilm and electronically: }}\\
 & \rule{0pt}{\@approvalspace} \\
 \hline
 \ifnum \@numberofmembers > 2
-& \rule{0pt}{\@approvalspace} \\
-\hline
+  & \rule{0pt}{\@approvalspace} \\
+  \hline
 \fi
 \ifnum \@numberofmembers > 3
-& \rule{0pt}{\@approvalspace} \\
-\hline
+  & \rule{0pt}{\@approvalspace} \\
+  \hline
 \fi
 \ifnum \@numberofmembers > 4
-& \rule{0pt}{\@approvalspace} \\
-\hline
+  & \rule{0pt}{\@approvalspace} \\
+  \hline
 \fi
 \ifnum \@numberofmembers > 5
-& \rule{0pt}{\@approvalspace} \\
-\hline
+  & \rule{0pt}{\@approvalspace} \\
+  \hline
 \fi
 \ifnum \@numberofmembers > 6
-& \rule{0pt}{\@approvalspace} \\
-\hline
+  & \rule{0pt}{\@approvalspace} \\
+  \hline
 \fi
 
-\ifx\@cochair\@isnotdefined% No cochair
-&\rule{0pt}{\@approvalspace} \\
-\hline
+\ifx\UCSD@cochair\@isnotdefined% No cochair
+  &\rule{0pt}{\@approvalspace} \\
+  \hline
 \else% Cochair
-&
-\newlength{\@tempapprovalspace} 
-\settoheight{\@tempapprovalspace}{Co-Chair}
-\setlength{\@tempapprovalspace}{-\@tempapprovalspace}
-\addtolength{\@tempapprovalspace}{-2pt}
-\raisebox{\@approvalspace}[\@approvalspace][0pt]%
-{\raisebox{\@tempapprovalspace}{Co-Chair}}\\
-\hline
+  &
+  % Add the Co-Chair label below the last line and make
+  % vertical space before adding another line.
+  \newlength{\@tempapprovalspace} 
+  \settoheight{\@tempapprovalspace}{\UCSD@text@cochair}
+  \setlength{\@tempapprovalspace}{-\@tempapprovalspace}
+  \addtolength{\@tempapprovalspace}{-2pt}
+  \raisebox{\@approvalspace}[\@approvalspace][0pt]%
+  {\raisebox{\@tempapprovalspace}{\UCSD@text@cochair}}\\
+  \hline
 \fi
 
-& Chair
+& \UCSD@text@chair
 \end{tabular*}\\[\@approvalspace]
 {\fmfont University of California, {\@campus}} \\
 \vspace{-.25in}
@@ -653,13 +665,13 @@ on microfilm and electronically: }}\\
   \vspace{.1in}
   University of California {\@campus}, \@degreeyear \par
   \vspace{.1in}
-  {\@chair}, Chair
+  {\UCSD@chair}, \UCSD@text@chair
   \vspace{.1in}
   %Check if there is a co-chair and add accordingly.
-  \ifx\@cochair\@isnotdefined 
+  \ifx\UCSD@cochair\@isnotdefined 
   \else
     \par
-    {\@cochair}, Co-Chair
+    {\UCSD@cochair}, \UCSD@text@cochair
     \vspace{.1in}
   \fi
   } % Closes fmfont above
