@@ -1,12 +1,15 @@
 %
 % UCSD Dissertation Class
 %
+%   For the latest version go to:
+%     http://ucsd-thesis.googlecode.com
+%
+%   Release info, modification history and author list below. 
+%
+%
 %   This file was originally based on the UC thesis template (see below
 %   for documentation on that document).  As a result, this file
 %   contains deprecated commentary, code, and options.  
-%
-% UCSD DOCUMENT CLASS
-%   Release info, modification history and author list below. 
 %
 % for LaTeX version 2e - 11/3/94
 %%% ====================================================================
@@ -16,8 +19,9 @@
 %%%
 %%%     codetable       = "ISO/ASCII",
 %%%     keywords        = "LaTeX, ucsd-thesis, ucsd, thesis",
+%%%     url             = "http://ucsd-thesis.googlecode.com",
 %%%
-%%%     docstring       = "This file is the main file for the ucthesis
+%%%     docstring       = "This file is the main file for the ucsd-thesis
 %%%                        class, which is intended to meet the requirements
 %%%                        for University of California San Diego 
 %%%                        Ph.D. dissertations.",
@@ -148,18 +152,22 @@
 %%%                        Extra page after Abstract removed.
 %%%                        Reformatted revision history.
 %%%
-%%%                   Version 3.4 2009/03/23
+%%%                   Version 3.4 2009/05/01
 %%%                        David Collins
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
+%%%                        MacNeil
 %%%                        
 %%%                        Added the co-chair to the abstract page.
+%%%                        Added an option for two equal co-chairs.
+%%%                        Adjusted spacing on the signature and vita
+%%%                        pages.
 %%%
 %%%
 %%%  }
 %%% ====================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2009/03/23 V3.4 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2009/05/01 V3.4 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
@@ -348,7 +356,7 @@
 % The name of your committee's chair
 \def\chair#1{\gdef\UCSD@chair{#1}}
 
-% The name of your committee's cochair, if applicable
+% The name of your committee's cochair (if applicable)
 \def\cochair#1{\gdef\UCSD@cochair{#1}}
 
 % The names of your committee's equal co-chairs 

@@ -1,3 +1,10 @@
+%
+%
+% UCSD Doctoral Dissertation Template
+% -----------------------------------
+% http:\\ucsd-thesis.googlecode.com
+%
+%
 
 
 %% REQUIRED FIELDS -- Replace with the values appropriate to you
@@ -16,7 +23,7 @@
 \chair{Professor Chair Master}
 % Uncomment the next line iff you have a Co-Chair
 % \cochair{Professor Cochair Semimaster} 
-
+%
 % Or, uncomment the next line iff you have two equal Co-Chairs.
 %\cochairs{Professor Chair Masterish}{Professor Chair Masterish}
 
@@ -29,26 +36,35 @@ Professor Cirius Thinker\\
 \numberofmembers{4} % |chair| + |cochair| + |othermembers|
 
 
-
+%% START THE FRONTMATTER
+%
 \begin{frontmatter}
-\makefrontmatter % The title, copyright, and signature pages.
+
+%% TITLE PAGES
+%
+%  This command generates the title, copyright, and signature pages.
+%
+\makefrontmatter 
 
 %% DEDICATION
-% You have three choices here:
-%   1. Use the ``dedication'' environment.   Put in the text you want,
-%   and you'll get a perfectly respectable dedication page.
 %
-%   2. Use the ``mydedication'' environment.  If you don't like the
-%   formatting of option 1, use this environment and format things
-%   however you wish.
+%  You have three choices here:
+%    1. Use the ``dedication'' environment. 
+%       Put in the text you want, and everything will be formated for 
+%       you. You'll get a perfectly respectable dedication page.
+%   
 %
-%   3. If you don't want a dedication, it's not required.
-
-
-% The style file will format this for you.
+%    2. Use the ``mydedication'' environment.  If you don't like the
+%       formatting of option 1, use this environment and format things
+%       however you wish.
+%
+%    3. If you don't want a dedication, it's not required.
+%
+%
 \begin{dedication} 
   To two, the loneliest number since the number one.
 \end{dedication}
+
 
 % \begin{mydedication} % You are responsible for formatting here.
 %   \vspace{1in}
@@ -70,7 +86,9 @@ Professor Cirius Thinker\\
 
 
 %% EPIGRAPH
+%
 %  The same choices that applied to the dedication apply here.
+%
 \begin{epigraph} % The style file will position the text for you.
   \emph{A careful quotation\\
   conveys brilliance.}\\
@@ -87,6 +105,8 @@ Professor Cirius Thinker\\
 % \end{myepigraph}
 
 
+%% SETUP THE TABLE OF CONTENTS
+%
 \tableofcontents
 % \listoffigures  % Uncomment if you have any figures
 % \listoftables   % Uncomment if you have any tables
@@ -94,11 +114,13 @@ Professor Cirius Thinker\\
 
 
 %% ACKNOWLEDGEMENTS
+%
 %  While technically optional, you probably have someone to thank.
 %  Also, a paragraph acknowledging all coauthors and publishers (if
 %  you have any) is required in the acknowledgements page and as the
 %  last paragraph of text at the end of each respective chapter. See
 %  the OGS Formatting Manual for more information.
+%
 \begin{acknowledgements} 
  Thanks to whoever deserves credit for Blacks Beach, Porters Pub, and
  every coffee shop in San Diego. 
@@ -108,8 +130,10 @@ Professor Cirius Thinker\\
 
 
 %% VITA
+%
 %  A brief vita is required in a doctoral thesis. See the OGS
 %  Formatting Manual for more information.
+%
 \begin{vitapage}
 \begin{vita}
   \item[2002] B.~S. in Mathematics \emph{cum laude}, University of Southern North Dakota, Hoople
@@ -118,16 +142,16 @@ Professor Cirius Thinker\\
 \end{vita}
 \begin{publications}
   \item Your Name, ``A Simple Proof Of The Riemann Hypothesis'', \emph{Annals of Math}, 314, 2007.
-  \item Your Name, Euclid, ``There Are Lots Of Prime Numbers'', \emph{Journal of Primes}, 1, 300
-	B.C.
+  \item Your Name, Euclid, ``There Are Lots Of Prime Numbers'', \emph{Journal of Primes}, 1, 300 B.C.
 \end{publications}
 \end{vitapage}
 
 
-%% Abstract
-% Doctoral dissertation abstracts should not exceed 350 words. MS thesis
-% abstracts can be up to 250 words. The abstract may, however, continue to a
-% second page if necessary.
+%% ABSTRACT
+%
+%  Doctoral dissertation abstracts should not exceed 350 words. 
+%   The abstract may continue to a second page if necessary.
+%
 \begin{abstract}
   This dissertation will be abstract. 
 \end{abstract}

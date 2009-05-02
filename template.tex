@@ -1,8 +1,13 @@
+%
+%
 % UCSD Doctoral Dissertation Template
+% -----------------------------------
+% http:\\ucsd-thesis.googlecode.com
+%
 %
 % ----------------------------------------------------------------------
-%
 % WARNING: 
+%
 %  This template has not endorced by OGS or any other official entity.
 %  The official formatting guide can be obtained from OGS.
 %  It can be found on the web here:
@@ -14,49 +19,75 @@
 %  That being said, this class has been used successfully for publication of 
 %  doctoral theses.  
 %
-% ----------------------------------------------------------------------
-%
-% Please read the comments in this file and make appropriate edits.
-%
-% NOTE: 
 %  The ucsd.cls class files are only valid for doctoral dissertations.
 %
-% This template and class file were valid as of 2009/03/19.
+%
+% ----------------------------------------------------------------------
+% GETTING STARTED:
+%
+% Lots of information can be found on the project wiki:
+% http://code.google.com/p/ucsd-thesis/wiki/GettingStarted
+%
+%
+% To make a pdf from this template use the command:
+%  pdflatex template
+%
+%
+% To get started please read the comments in this template file 
+% and make changes as appropriate.
+%
+%
+% ----------------------------------------------------------------------
+%
+% A thesis using this template and class file was last successfully 
+% submitted on 2009/03/19 (at least as far as I know).
+%
 %
 % ----------------------------------------------------------------------
 % If you desire more control, please see the attached files:
-%   * ucsd.cls -- Class file
-%   * uct10.clo, uct11.clo, uct12.clo -- Configuration files for font sizes 10pt,11pt,12pt
 %
-% CHANGELOG:
-%   2008/05/13 -  Original file adapted from brockman.tex by JRB and RMR
-%                 to work with ucsd.cls
-%   2009/03/23 - Frontmatter moved to a separate file.  
-%                Comments added throughout.
+%   * ucsd.cls    -- Class file
+%   * uct10.clo   -- Configuration files for font sizes 10pt, 11pt, 12pt
+%     uct11.clo                            
+%     uct12.clo
+%
+% ----------------------------------------------------------------------
 
 
-\documentclass[12pt,chapterheads]{ucsd}
-% documentclass options: default is 11pt, oneside, final.
+
+% Setup the documentclass 
+% default options: 11pt, oneside, final
+%
 % fonts: 10pt, 11pt, 12pt -- are valid for UCSD dissertations.
-% sides: oneside, twoside -- note that two-sided theses are not accepted by OGS
-% mode: draft, final -- draft mode switches to single spacing, removes hyperlinks,
-%                       and places a black box at every overfull hbox 
-%                       (check these before submission).
-% chapterheads -- include this if you want your chapters to read:
-%                 Chapter 1
-%                 Title of Chapter
+% sides: oneside, twoside -- note that two-sided theses are not accepted 
+%                            by OGS.
+% mode: draft, final      -- draft mode switches to single spacing, 
+%                            removes hyperlinks, and places a black box
+%                            at every overfull hbox (check these before
+%                            submission).
+% chapterheads            -- Include this if you want your chapters to read:
+%                              Chapter 1
+%                              Title of Chapter
 %
-%                 instead of
+%                            instead of
 %
-%                 1 Title of Chapter
+%                              1 Title of Chapter
+\documentclass[12pt,chapterheads]{ucsd}
+
 
 
 % Include all packages you need here.  
 % Some standard options are suggested below.
+%
+% See the project wiki for information on how to use 
+% these packages. Other useful packages are also listed there.
+%
+%   http://code.google.com/p/ucsd-thesis/wiki/GettingStarted
+
 
 
 %% AMS PACKAGES - Chances are you will want some or all 
-%    of these if writing a math dissertation.
+%    of these if writing a dissertation that includes equations.
 %  \usepackage{amsmath, amscd, amssymb, amsthm}
 
 %% GRAPHICX - This is the standard package for 

@@ -1,16 +1,27 @@
+
+UCSD Doctoral Dissertation LaTeX Class
+--------------------------------------
+http:\\ucsd-thesis.googlecode.com
+
+
 This folder should contain:
-    template.tex - Primary Driver File
-    template_frontmatter.tex - Where the title, abstract, etc. are held.
-    ucsd.cls - LaTeX class file
-    uct10.clo - Font files associated to LaTeX class file
+    template.tex              - Primary Driver File
+    template_frontmatter.tex  - Where the title, abstract, etc. are held.
+    ucsd.cls                  - LaTeX class file
+    uct10.clo                 - Font files associated to LaTeX class file
     uct11.clo
     uct12.clo
 
-Instructions:
-  You should copy all of the above files to the directory in which you plan to work.  
-  Start by looking over the template.
 
-Warning:
+Instructions:
+  Copy all of the above files to the directory in which you plan to work.  
+  Look over the template to get started.
+
+  For more information go to the project wiki page:
+  http://code.google.com/p/ucsd-thesis/wiki/GettingStarted
+
+
+Warnings:
   This template has not endorced by OGS or any other official entity.
   The official formatting guide can be obtained from OGS.
   It can be found on the web here:
@@ -23,6 +34,7 @@ Warning:
   doctoral theses.  
 
   The last successful known use of this LaTeX class was on 2009/03/19.  
+
 
 Bugs:
   Please report all bugs at http://code.google.com/p/ucsd-thesis/issues/list
