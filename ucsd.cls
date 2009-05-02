@@ -155,7 +155,7 @@
 %%%                   Version 3.4 2009/05/01
 %%%                        David Collins
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
-%%%                        MacNeil
+%%%                        Macneil Shonle
 %%%                        
 %%%                        Added the co-chair to the abstract page.
 %%%                        Added an option for two equal co-chairs.
