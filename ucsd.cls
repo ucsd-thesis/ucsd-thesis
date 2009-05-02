@@ -496,7 +496,7 @@ All rights reserved.}
 \begin{center}
 \vspace{.25in}
 \vspace{\@approvalspace}
-\makebox[4in][l]{\parbox{3.5in}{\fmfont The dissertation of {\@author} 
+\makebox[4in][l]{\parbox{4in}{\fmfont The dissertation of {\@author} 
 is approved, and it is acceptable in quality and form for publication 
 on microfilm and electronically: }}\\
 \begin{tabular*}{4in}[t]{r@{\extracolsep{\fill}}r}
@@ -625,7 +625,7 @@ on microfilm and electronically: }}\\
 %
 \def\vitalabel#1{#1\hfill}
 \def\vita{\begin{center}VITA\end{center}
-     \list{}{\ssp \leftmargin 2in \labelwidth 1.7in \let\makelabel\vitalabel
+     \list{}{\ssp \leftmargin 1.5in \labelwidth 1.2in \let\makelabel\vitalabel
            \labelsep 0.3in}}
 \let\endvita\endlist
 
