@@ -162,6 +162,13 @@
 %%%                        Adjusted spacing on the signature and vita
 %%%                        pages.
 %%%
+%%%                   Version 3.5 2009/05/10
+%%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
+%%%                        evilkartman
+%%%                        
+%%%                        Fixed spacing of preliminary entries in TOC.
+%%%                        Fixed alignment of multi-line captions in TOF.
+%%%
 %%%
 %%%  }
 %%% ====================================================================
@@ -498,7 +505,7 @@ All rights reserved.}
 % (EVM, 9/19/94)
 
 \phantomsection
-\addcontentsline{toc}{chapter}{\protect\numberline{}Signature Page}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}Signature Page}%
 \begin{alwayssingle}
 \null\vfill
 \begin{center}
@@ -566,7 +573,7 @@ on microfilm and electronically: }}\\
 
 \newenvironment{dedication}
 {\phantomsection % RMR - hyperref requires a \section in order to place a hyperlink
-\addcontentsline{toc}{chapter}{\protect\numberline{}Dedication}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}Dedication}%
 \begin{alwayssingle}
   \centerline{\expandafter\uppercase\expandafter{Dedication}}%
   \large\begin{center}
@@ -577,7 +584,7 @@ on microfilm and electronically: }}\\
 % user can do whatever they wish.
 \newenvironment{mydedication}
 {\phantomsection
-\addcontentsline{toc}{chapter}{\protect\numberline{}Dedication}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}Dedication}%
   \centerline{\expandafter\uppercase\expandafter{Dedication}}}
 {}
 
@@ -590,7 +597,7 @@ on microfilm and electronically: }}\\
 % flush to the right.
 \newenvironment{epigraph}
 {\phantomsection 
-\addcontentsline{toc}{chapter}{\protect\numberline{}Epigraph}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}Epigraph}%
 \begin{alwayssingle}
   \centerline{\expandafter\uppercase\expandafter{Epigraph}}%
   \vspace{2in}\hfill\begin{flushright}}
@@ -601,7 +608,7 @@ on microfilm and electronically: }}\\
 % user can do whatever they wish.
 \newenvironment{myepigraph}
 {\phantomsection 
-\addcontentsline{toc}{chapter}{\protect\numberline{}Epigraph}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}Epigraph}%
   \centerline{\expandafter\uppercase\expandafter{Epigraph}}}%
 {}
 
@@ -613,7 +620,7 @@ on microfilm and electronically: }}\\
 \newenvironment{acknowledgements}
 {\begin{alwayssingle}
 \phantomsection
-\addcontentsline{toc}{chapter}{\protect\numberline{}\acknowledgename}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}\acknowledgename}%
 \centerline{\expandafter\uppercase\expandafter{\acknowledgename}}%
 \bigskip
 }
@@ -628,7 +635,7 @@ on microfilm and electronically: }}\\
 \def\vitapage{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
      \else \newpage \fi\pagestyle{preliminary}
      \phantomsection
-     \addcontentsline{toc}{chapter}{\protect\numberline{}Vita and Publications}}
+     \addcontentsline{toc}{frontmatter}{\protect\numberline{}Vita and Publications}}
 % Special label for the vita list
 %
 \def\vitalabel#1{#1\hfill}
@@ -684,7 +691,7 @@ on microfilm and electronically: }}\\
   \fi
   } % Closes fmfont above
   \end{center}
-  \addcontentsline{toc}{chapter}{\protect\numberline{}\abstractshortname}
+  \addcontentsline{toc}{frontmatter}{\protect\numberline{}\abstractshortname}
   \par
 }
 
@@ -1045,7 +1052,7 @@ on microfilm and electronically: }}\\
 % From ucsd-thesis.sty (WBB), modified 
   \newpage
   \phantomsection
-  \addcontentsline{toc}{chapter}{\protect\numberline{}\contentslongname}%
+  \addcontentsline{toc}{frontmatter}{\protect\numberline{}\contentslongname}%
   \centerline{\expandafter\uppercase\expandafter{\contentslongname}}%
   \bigskip%
 %  \chapter*{\contentsname
@@ -1092,8 +1099,24 @@ on microfilm and electronically: }}\\
 \settowidth{\@chapterlength}{\@chapapp}
 \addtolength{\@chapterlength}{2.6em} % Space between toc labels and values
 \fi
-%\def\l@chapter{\pagebreak[3]\vskip 1em plus 1pt \@dottedtocline{0}{0em}{1.5em}}
+
 \def\l@chapter{\normalfont\pagebreak[3]\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\@chapterlength}}
+
+\newlength{\UCSD@toc@frontmatterLength}
+\setlength{\UCSD@toc@frontmatterLength}{0em}
+% Use the following line to have the front matter title aligned with 
+% the chapter titles.  Otherwise they will aligned to the left (as required by OGS.)
+%\setlength{\UCSD@toc@frontmatterLength}{0em}
+\def\l@frontmatter{\normalfont\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\UCSD@toc@frontmatterLength}}
+
+
+\newlength{\UCSD@toc@backmatterLength}
+\setlength{\UCSD@toc@backmatterLength}{0em}
+% Use the following line to have the front matter title aligned with 
+% the chapter titles.  Otherwise they will aligned to the left (as required by OGS.)
+%\setlength{\UCSD@toc@backmatterLength}{0em}
+\def\l@backmatter{\normalfont\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\UCSD@toc@frontmatterLength}}
+
 
 \def\l@section{\normalfont\@dottedtocline{1}{\@chapterlength}{2.3em}}
 
@@ -1129,7 +1152,7 @@ on microfilm and electronically: }}\\
   \centerline{\expandafter\uppercase\expandafter{\listfigurename}}%
   \bigskip%
   \phantomsection
-  \addcontentsline{toc}{chapter}{\protect\numberline{}\listfigurename }%
+  \addcontentsline{toc}{frontmatter}{\protect\numberline{}\listfigurename }%
   \begingroup  % This group overloads \numberline to output ``Figure 1.3'' instead of ``1.3''
   \let\ORIG@numberline\numberline
   \renewcommand*{\numberline}[1]{
@@ -1160,14 +1183,14 @@ on microfilm and electronically: }}\\
   \centerline{\expandafter\uppercase\expandafter{\listtablename}}%
   \bigskip%
   \phantomsection
-  \addcontentsline{toc}{chapter}{\protect\numberline{}\listtablename }%
+  \addcontentsline{toc}{frontmatter}{\protect\numberline{}\listtablename }%
   % RMR 2007 
   \begingroup  % This group overloads \numberline to output ``Table 1.3'' instead of ``1.3''
   \let\ORIG@numberline\numberline
   \renewcommand*{\numberline}[1]{\ORIG@numberline{\tablename~##1:}}
 %  \chapter*{\listtablename\@mkboth{\uppercase{\listtablename}}%
 %{\uppercase{\listtablename}}}
-%   \addcontentsline{toc}{chapter}{\listtablename}
+%   \addcontentsline{toc}{frontmatter}{\listtablename}
    {\ssp\@starttoc{lot}}\if@restonecol
   \twocolumn\fi
   \endgroup  
@@ -1204,7 +1227,7 @@ on microfilm and electronically: }}\\
 %%               to get correct references
 \def\thebibliography#1{\chapter*{\bibname\@mkboth
   {\expandafter\uppercase\expandafter{\bibname}}{\expandafter\uppercase\expandafter{\bibname}}}
-  \addcontentsline{toc}{chapter}{\bibname}
+  \addcontentsline{toc}{backmatter}{\bibname}
   \ssp %WBB re OGSR style, 6.11.97
   \list{\@biblabel{\arabic{enumiv}}}{\settowidth\labelwidth{\@biblabel{#1}}%
     \leftmargin\labelwidth
@@ -1251,7 +1274,7 @@ on microfilm and electronically: }}\\
     \thispagestyle{plain}\parindent\z@
     \parskip\z@ plus .3\p@\relax\let\item\@idxitem
 \phantomsection
-\addcontentsline{toc}{chapter}{\indexname} 
+\addcontentsline{toc}{backmatter}{\indexname} 
 }
 
 \def\@idxitem{\par\hangindent 40\p@}
