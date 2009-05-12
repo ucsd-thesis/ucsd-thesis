@@ -1,0 +1,233 @@
+%
+%
+% UCSD Doctoral Dissertation Template
+% -----------------------------------
+% http:\\ucsd-thesis.googlecode.com
+%
+%
+% ----------------------------------------------------------------------
+% WARNING: 
+%
+%  This template has not endorced by OGS or any other official entity.
+%  The official formatting guide can be obtained from OGS.
+%  It can be found on the web here:
+%  http://ogs.ucsd.edu/AcademicAffairs/Documents/Dissertations_Theses_Formatting_Manual.pdf
+%
+%  No guaranty is made that this LaTeX class conforms to the official UCSD guidelines.
+%  Make sure that you check the final document against the Formatting Manual.
+%  
+%  That being said, this class has been used successfully for publication of 
+%  doctoral theses.  
+%
+%  The ucsd.cls class files are only valid for doctoral dissertations.
+%
+%
+% ----------------------------------------------------------------------
+% GETTING STARTED:
+%
+% Lots of information can be found on the project wiki:
+% http://code.google.com/p/ucsd-thesis/wiki/GettingStarted
+%
+%
+% To make a pdf from this template use the command:
+%  pdflatex template
+%
+%
+% To get started please read the comments in this template file 
+% and make changes as appropriate.
+%
+%
+% ----------------------------------------------------------------------
+%
+% A thesis using this template and class file was last successfully 
+% submitted on 2009/03/19 (at least as far as I know).
+%
+% If you successfully submit a thesis with this package please let us
+% know.
+%
+% ----------------------------------------------------------------------
+% If you desire more control, please see the attached files:
+%
+%   * ucsd.cls    -- Class file
+%   * uct10.clo   -- Configuration files for font sizes 10pt, 11pt, 12pt
+%     uct11.clo                            
+%     uct12.clo
+%
+% ----------------------------------------------------------------------
+
+
+
+% Setup the documentclass 
+% default options: 11pt, oneside, final
+%
+% fonts: 10pt, 11pt, 12pt -- are valid for UCSD dissertations.
+% sides: oneside, twoside -- note that two-sided theses are not accepted 
+%                            by OGS.
+% mode: draft, final      -- draft mode switches to single spacing, 
+%                            removes hyperlinks, and places a black box
+%                            at every overfull hbox (check these before
+%                            submission).
+% chapterheads            -- Include this if you want your chapters to read:
+%                              Chapter 1
+%                              Title of Chapter
+%
+%                            instead of
+%
+%                              1 Title of Chapter
+\documentclass[12pt,chapterheads]{ucsd}
+
+
+
+% Include all packages you need here.  
+% Some standard options are suggested below.
+%
+% See the project wiki for information on how to use 
+% these packages. Other useful packages are also listed there.
+%
+%   http://code.google.com/p/ucsd-thesis/wiki/GettingStarted
+
+
+
+%% AMS PACKAGES - Chances are you will want some or all 
+%    of these if writing a dissertation that includes equations.
+%  \usepackage{amsmath, amscd, amssymb, amsthm}
+
+%% GRAPHICX - This is the standard package for 
+%    including graphics for latex/pdflatex.
+\usepackage{graphicx}
+
+%% SUBFIGURE - Use this to place multiple images in a
+%    single figure.  Subfigure will handle placement and
+%    proper captioning (e.g. Figure 1.2(a))
+% \usepackage{subfigure}
+
+%% LATIN MODERN FONTS (replacements for Computer Modern)
+% \usepackage{lmodern}
+% \usepackage[T1]{fontenc}
+
+%% INDEX
+%   Uncomment the following two lines to create an index: 
+\usepackage{makeidx}
+\makeindex
+%   You will need to uncomment the \printindex line near the
+%   bibliography to display the index.  Use the command
+% \index{keyword} 
+%   within the text to create an entry in the index for keyword.
+
+%% HYPERLINKS
+%   To create a PDF with hyperlinks, you need to include the hyperref package.
+%   THIS HAS TO BE THE LAST PACKAGE INCLUDED!
+%   Note that the options plainpages=false and pdfpagelabels exist
+%   to fix indexing associated with having both (ii) and (2) as pages.
+%   Also, all links must be black according to OGS.
+%   See: http://www.tex.ac.uk/cgi-bin/texfaq2html?label=hyperdupdest
+%   Note: This may not work correctly with all DVI viewers (i.e. Yap breaks).
+%   NOTE: hyperref will NOT work in draft mode, as noted above.
+% \usepackage[colorlinks=true, pdfstartview=FitV, 
+%             linkcolor=black, citecolor=black, 
+%             urlcolor=black, plainpages=false,
+%             pdfpagelabels]{hyperref}
+% \hypersetup{ pdfauthor = {Your Name Here}, 
+%              pdftitle = {The Title of The Dissertation}, 
+%              pdfkeywords = {Keywords for Searching}, 
+%              pdfcreator = {pdfLaTeX with hyperref package}, 
+%              pdfproducer = {pdfLaTeX} }
+
+\begin{document}
+
+
+
+%% FRONT MATTER
+%
+%  All of the front matter.
+%  This includes the title, degree, dedication, vita, abstract, etc..
+%  Modify the file template_frontmatter.tex to change these pages.
+\include{template_frontmatter}
+
+
+
+
+
+%% DISSERTATION
+
+% A common strategy here is to include files for each of the chapters. I.e.,
+% Place the chapters is separate files: 
+%   chapter1.tex, chapter2.tex
+% Then use the commands:
+%   \include{chapter1}
+%   \include{chapter2}
+%
+% Of course, if you prefer, you can just start with
+%   \chapter{My First Chapter Name}
+% and start typing away.  
+\chapter{Just a Test}
+This is only a test.
+\section{A section}
+\index{latin}Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla odio
+sem, bibendum ut, aliquam ac, facilisis id, tellus. Nam posuere pede
+sit amet ipsum. Etiam dolor. In sodales eros quis pede.  Quisque sed
+nulla et ligula vulputate lacinia. In venenatis, ligula id semper
+feugiat, ligula odio adipiscing libero, eget mollis nunc erat id orci.
+Nullam ante dolor, rutrum eget, vestibulum euismod, pulvinar at, nibh.
+In sapien. Quisque ut arcu. Suspendisse potenti. Cras consequat cursus
+nulla.
+\subsection{More Stuff}
+Blah
+
+\chapter{How to Recognise Different Types of Trees From Quite a Long Way Away}
+
+\section{No. 1, the Larch}
+\begin{figure}[ht] 
+  \centering
+  \includegraphics[width=0.8\textwidth]{larch}
+  \caption{Shown is a picture of the larch as might be seen from quite a long way away.\index{Larch}} 
+\end{figure}
+
+\section{And Now . . . No. 1, the Larch}
+\begin{figure}[hb] 
+  \centering
+  \includegraphics[width=0.8\textwidth]{larch}
+  \caption[No. 1 The Larch]{Shown is a picture of the larch as might be seen from quite a long way away.\index{Larch}} 
+\end{figure}
+
+% Here I am testing that page breaking on the TOC works correctly.
+% We never want the page break directly after a chapter entry.
+\chapter{Another chapter}
+\section{Some Stuff You Probably Don't Want to Read}
+\section{Some Stuff You Really Don't Want to Read, it is Utterly and Completely Dull}
+%\section{Now I am Just Writing Filler}
+%\section{More Filler}
+%\subsection{How Many Lines Am I at?}
+%\subsection{Stuff}
+%\section{Stuff}
+%\section{Ooo-De-Laly}
+%\subsection{Ooo-De-Laly, Ooo-De-Laly}
+%\section{Slithy Toves}
+
+
+\chapter{On the Inner Workings of a Grad Student Mind}
+\section{Before Thesis Writing Has Begun}
+\section{During Thesis Writing}
+\section{During Thesis Formatting}
+\section{After Thesis Writing}
+\section{Before Defense}
+\section{After Defense}
+
+\appendix
+\chapter{Final notes}
+  Remove me in case of abdominal pain.
+
+
+
+
+
+%% END MATTER
+\printindex %% Uncomment to display the index
+% \nocite{}  %% Put any references that you want to include in the bib 
+%               but haven't cited in the braces.
+% \bibliographystyle{alpha}  %% This is just my personal favorite style. 
+%                              There are many others.
+% \bibliography{myrefs}  %% This looks for the bibliography in myrefs.bib 
+%                          which should be formatted as a bibtex file.
+\end{document}
+

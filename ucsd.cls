@@ -172,6 +172,20 @@
 %%%
 %%%  }
 %%% ====================================================================
+%%% To Do:
+%%%
+%%%   - Section titles don't break well.  These do not need to be
+%%%     justified full.
+%%%
+%%%   - Vita titles don't break well.  I need to add more freedom to add
+%%%     white space, or let the right hand side go ragged.
+%%%
+%%%   - section and subsection titles are aligned differently.
+%%%
+%%%   - Page numbering is hard coded for parts of the front matter.  
+%%%     Instead, page numbering should be automatic, but a warning should
+%%%     be displayed if it is not what is expected.
+%%%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ucsd}[2009/05/01 V3.4 University of California, San Diego, Dissertation Class]
