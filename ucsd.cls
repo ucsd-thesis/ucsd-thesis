@@ -153,8 +153,8 @@
 %%%                        Reformatted revision history.
 %%%
 %%%                   Version 3.4 2009/05/01
-%%%                        David Collins
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
+%%%                        David Collins
 %%%                        Macneil Shonle
 %%%                        
 %%%                        Added the co-chair to the abstract page.
@@ -164,8 +164,7 @@
 %%%
 %%%                   Version 3.5 2009/05/10
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
-%%%                        evilkartman
-%%%                        
+%%%                   
 %%%                        Fixed spacing of preliminary entries in TOC.
 %%%                        Fixed alignment of multi-line captions in TOF.
 %%%
@@ -189,7 +188,7 @@
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2009/05/01 V3.4 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2009/05/12 V3.5 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
@@ -1127,7 +1126,7 @@ on microfilm and electronically: }}\\
 
 \newlength{\UCSD@toc@backmatterLength}
 \setlength{\UCSD@toc@backmatterLength}{0em}
-% Use the following line to have the front matter title aligned with 
+% Use the following line to have the back matter title aligned with 
 % the chapter titles.  Otherwise they will aligned to the left (as required by OGS.)
 %\setlength{\UCSD@toc@backmatterLength}{0em}
 \def\l@backmatter{\normalfont\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\UCSD@toc@frontmatterLength}}
@@ -1158,64 +1157,54 @@ on microfilm and electronically: }}\\
 % LIST OF FIGURES
 %
 % Single-space list of figures, add it to the table of contents.
-\def\listoffigures{\@restonecolfalse
-  \if@twocolumn\@restonecoltrue\onecolumn\fi
-%  \chapter*{\listfigurename\@mkboth{\uppercase{\listfigurename}}%
-% {\uppercase{\listfigurename}}}
-% WBB
-  \newpage
+\def\listoffigures{%
+  \@restonecolfalse%
+  \if@twocolumn\@restonecoltrue\onecolumn\fi%
+  \newpage%
   \centerline{\expandafter\uppercase\expandafter{\listfigurename}}%
   \bigskip%
-  \phantomsection
+  \phantomsection%
   \addcontentsline{toc}{frontmatter}{\protect\numberline{}\listfigurename }%
-  \begingroup  % This group overloads \numberline to output ``Figure 1.3'' instead of ``1.3''
-  \let\ORIG@numberline\numberline
-  \renewcommand*{\numberline}[1]{
-  \ORIG@numberline{\figurename~##1:}}
-
-   {\ssp\@starttoc{lof}}\if@restonecol
-    \twocolumn\fi
-  \endgroup  
+  %This group overloads \numberline to output ``Figure 1.3'' instead of ``1.3''
+  \begingroup%
+    \let\ORIG@numberline\numberline%
+    \renewcommand*{\numberline}[1]{%
+      \ORIG@numberline{\figurename~##1:}}%
+    {\ssp\@starttoc{lof}}%
+    \if@restonecol\twocolumn\fi%
+  \endgroup %
   }
 
-%\def\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
 \newlength{\@figurelength}
 \settowidth{\@figurelength}{\figurename }
-\addtolength{\@figurelength}{2.8em} % Magic value, but consistent with the standard figure length
+% Magic value, but consistent with the standard figure length
+\addtolength{\@figurelength}{2.8em}
 \def\l@figure{\normalfont\@dottedtocline{1}{0em}{\@figurelength}}
 
 % LIST OF TABLES
 %
-%\def\listoftables{\@restonecolfalse
-%  \if@twocolumn\@restonecoltrue\onecolumn\fi
-%  \chapter*{\listtablename\@mkboth{\uppercase{\listtablename}}%
-%   {\uppercase{\listtablename}}}\@starttoc{lot}\if@restonecol
-%  \twocolumn\fi}
-\def\listoftables{\@restonecolfalse
-  \if@twocolumn\@restonecoltrue\onecolumn\fi
-% WBB
-  \newpage
+% Single-space list of tables, add it to the table of contents.
+\def\listoftables{%
+  \@restonecolfalse%
+  \if@twocolumn\@restonecoltrue\onecolumn\fi%
+  \newpage%
   \centerline{\expandafter\uppercase\expandafter{\listtablename}}%
   \bigskip%
-  \phantomsection
+  \phantomsection%
   \addcontentsline{toc}{frontmatter}{\protect\numberline{}\listtablename }%
-  % RMR 2007 
-  \begingroup  % This group overloads \numberline to output ``Table 1.3'' instead of ``1.3''
-  \let\ORIG@numberline\numberline
-  \renewcommand*{\numberline}[1]{\ORIG@numberline{\tablename~##1:}}
-%  \chapter*{\listtablename\@mkboth{\uppercase{\listtablename}}%
-%{\uppercase{\listtablename}}}
-%   \addcontentsline{toc}{frontmatter}{\listtablename}
-   {\ssp\@starttoc{lot}}\if@restonecol
-  \twocolumn\fi
-  \endgroup  
+  % This group overloads \numberline to output ``Table 1.3'' instead of ``1.3''
+  \begingroup%
+    \let\ORIG@numberline\numberline%
+    \renewcommand*{\numberline}[1]{\ORIG@numberline{\tablename~##1:}}%
+    {\ssp\@starttoc{lot}}%
+    \if@restonecol\twocolumn\fi%
+  \endgroup %
   }
 
-
-%\let\l@table\l@figure
 \newlength{\@tablelength}
 \settowidth{\@tablelength}{\tablename }
-\addtolength{\@tablelength}{2.8em} % Magic value, but consistent with the standard table length
+% Magic value, but consistent with the standard table length.
+\addtolength{\@tablelength}{2.8em}
 \def\l@table{\normalfont\@dottedtocline{1}{0em}{\@tablelength}}
 
 
