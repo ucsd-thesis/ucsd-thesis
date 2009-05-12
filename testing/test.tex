@@ -74,7 +74,7 @@
 %                            instead of
 %
 %                              1 Title of Chapter
-\documentclass[12pt,chapterheads]{ucsd}
+\documentclass[10pt,chapterheads]{ucsd}
 
 
 
@@ -133,6 +133,9 @@
 %              pdfcreator = {pdfLaTeX with hyperref package}, 
 %              pdfproducer = {pdfLaTeX} }
 
+
+\usepackage{verbatim}
+
 \begin{document}
 
 
@@ -142,7 +145,7 @@
 %  All of the front matter.
 %  This includes the title, degree, dedication, vita, abstract, etc..
 %  Modify the file template_frontmatter.tex to change these pages.
-\include{template_frontmatter}
+\include{test_frontmatter}
 
 
 
@@ -180,14 +183,23 @@ Blah
 \begin{figure}[ht] 
   \centering
   \includegraphics[width=0.8\textwidth]{larch}
-  \caption{Shown is a picture of the larch as might be seen from quite a long way away.\index{Larch}} 
+  \caption{Shown is a picture of the larch as might be seen from quite a long way away.\index{Larch}}
 \end{figure}
 
 \section{And Now . . . No. 1, the Larch}
+\newpage
+\thispagestyle{facingcap}
+\begin{center}
+\vspace*{3in}
+\textbf{Figure \ref{Sideways Larch}:} Here is a caption for the Larch after you have had a wee too much to drink.
+
+\end{center}
+\newpage
+
 \begin{figure}[hb] 
   \centering
   \includegraphics[width=0.8\textwidth]{larch}
-  \caption[No. 1 The Larch]{Shown is a picture of the larch as might be seen from quite a long way away.\index{Larch}} 
+  \caption[No. 1 The Larch]{Shown is a picture of the larch as might be seen from quite a long way away.\index{Larch}}\label{Sideways Larch}
 \end{figure}
 
 % Here I am testing that page breaking on the TOC works correctly.
@@ -212,6 +224,26 @@ Blah
 \section{After Thesis Writing}
 \section{Before Defense}
 \section{After Defense}
+
+The Mock Turtle sighed deeply, and drew the back of one flapper across his eyes. He looked at Alice, and tried to speak, but for a minute or two sobs choked his voice. `Same as if he had a bone in his throat,' said the Gryphon: and it set to work shaking him and punching him in the back. At last the Mock Turtle recovered his voice, and, with tears running down his cheeks, he went on again:
+
+
+\begin{verbatim}
+``There's a porpoise close behind us, and he's treading on my tail.
+See how eagerly the lobsters and the turtles all advance!
+They are waiting on the shingle--will you come and join the dance?
+
+Will you, won't you, 
+                     will you, won't you, 
+                                          will you join the dance?
+Will you, won't you, 
+                     will you, won't you, 
+                                          won't you join the dance?''
+\end{verbatim}
+
+
+
+So Alice began telling them her adventures from the time when she first saw the White Rabbit. She was a little nervous about it just at first, the two creatures got so close to her, one on each side, and opened their eyes and mouths so very wide, but she gained courage as she went on. Her listeners were perfectly quiet till she got to the part about her repeating `You are Old, Father William,' to the Caterpillar\footnote{Which we introduced in a different thesis}, and the words all coming different, and then the Mock Turtle drew a long breath, and said `That's very curious'.
 
 \appendix
 \chapter{Final notes}
