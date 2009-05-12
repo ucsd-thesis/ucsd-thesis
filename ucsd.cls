@@ -179,6 +179,7 @@
 %%%
 %%%   - Vita titles don't break well.  I need to add more freedom to add
 %%%     white space, or let the right hand side go ragged.
+%%%     Update: In the OGS manual, this is not justified full.
 %%%
 %%%   - section and subsection titles are aligned differently.
 %%%
@@ -1578,7 +1579,7 @@ on microfilm and electronically: }}\\
 % page numbering and margins
 %
 
-\def\ps@facingcap{\let\@mkboth\@gobbletwo
+\def\ps@facingcaption{\let\@mkboth\@gobbletwo
      \def\@oddhead{\rmfamily\thepage\hfil} \def\oddfoot{}
      \let\@evenhead\@oddhead \def\@evenfoot{}
      \oddsidemargin 0in \let\evensidemargin\oddsidemargin
