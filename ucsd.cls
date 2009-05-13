@@ -186,7 +186,7 @@
 %%%     Instead, page numbering should be automatic, but a warning should
 %%%     be displayed if it is not what is expected.
 %%%
-%%%   - A test pages need to be added for the pslatex font.
+%%%   - A test pages need to be added for the mathptmx font.
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
