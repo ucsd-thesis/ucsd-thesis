@@ -186,6 +186,8 @@
 %%%     Instead, page numbering should be automatic, but a warning should
 %%%     be displayed if it is not what is expected.
 %%%
+%%%   - A test pages need to be added for the pslatex font.
+%%%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ucsd}[2009/05/12 V3.5 University of California, San Diego, Dissertation Class]
