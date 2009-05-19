@@ -167,6 +167,10 @@
 %%%                   
 %%%                        Fixed spacing of preliminary entries in TOC.
 %%%                        Fixed alignment of multi-line captions in TOF.
+%%%                        Fixed spacing on the abstract page
+%%%                          now multiline titles will be single spaced.
+%%%                          Spacing between chair and co-chair single spaced.
+%%%                        
 %%%
 %%%
 %%%  }
@@ -186,7 +190,7 @@
 %%%     Instead, page numbering should be automatic, but a warning should
 %%%     be displayed if it is not what is expected.
 %%%
-%%%   - A test pages need to be added for the mathptmx font.
+%%%   - A test page need to be added for the mathptmx font.
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
@@ -683,28 +687,29 @@ on microfilm and electronically: }}\\
   \phantomsection
   \begin{alwayssingle}
   \begin{center}
+  \ssp
   {\fmfont
   {\expandafter\uppercase\expandafter{\abstractlongname}}\par
   \vspace{.5in}
   {\bfseries
     {\@title} \par}
-  \vspace{.1in}
+  \vspace{.5in}
   by\par
-  \vspace{.1in}
+  \vspace{.5in}
   \@author\par
+  \vspace{.3in}
   {\@degreetitle} in \@field\par
-  \vspace{.1in}
-  University of California {\@campus}, \@degreeyear \par
-  \vspace{.1in}
+  \vspace{.3in}
+  University of California, {\@campus}, \@degreeyear \par
+  \vspace{.3in}
   {\UCSD@chair}, \UCSD@text@chair
-  \vspace{.1in}
   %Check if there is a co-chair and add accordingly.
   \ifx\UCSD@cochair\@isnotdefined 
   \else
     \par
     {\UCSD@cochair}, \UCSD@text@cochair
-    \vspace{.1in}
   \fi
+  \vspace{.3in}
   } % Closes fmfont above
   \end{center}
   \addcontentsline{toc}{frontmatter}{\protect\numberline{}\abstractshortname}
