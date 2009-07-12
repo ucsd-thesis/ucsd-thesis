@@ -162,7 +162,7 @@
 %%%                        Adjusted spacing on the signature and vita
 %%%                        pages.
 %%%
-%%%                   Version 3.5 2009/05/10
+%%%                   Version 3.5 2009/07/12
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
 %%%                   
 %%%                        Fixed spacing of preliminary entries in TOC.
@@ -194,7 +194,7 @@
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2009/05/12 V3.5 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2009/07/12 V3.5 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
