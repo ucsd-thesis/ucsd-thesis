@@ -15,7 +15,7 @@
 %%% ====================================================================
 %%%  @LaTeX-class-file{
 %%%     filename       = "ucsd.cls",
-%%%     version        = "3.3",
+%%%     version        = "3.6",
 %%%
 %%%     codetable       = "ISO/ASCII",
 %%%     keywords        = "LaTeX, ucsd-thesis, ucsd, thesis",
@@ -170,8 +170,11 @@
 %%%                        Fixed spacing on the abstract page
 %%%                          now multiline titles will be single spaced.
 %%%                          Spacing between chair and co-chair single spaced.
-%%%                        
 %%%
+%%%                   Version 3.6 2009/10
+%%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>                       
+%%%
+%%%                        Figure and Tabel lables now bold in captions.
 %%%
 %%%  }
 %%% ====================================================================
@@ -194,7 +197,7 @@
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2009/07/12 V3.5 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2009/10/24 V3.6 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
@@ -1436,7 +1439,7 @@ on microfilm and electronically: }}\\
 \def\fps@figure{tbp}
 \def\ftype@figure{1}
 \def\ext@figure{lof}
-\def\fnum@figure{\figurename~\thefigure}
+\def\fnum@figure{\textbf{\figurename~\thefigure}}
 \def\figure{\@float{figure}}
 \def\endfigure{\end@float}
 \@namedef{figure*}{\@dblfloat{figure}}
@@ -1450,7 +1453,7 @@ on microfilm and electronically: }}\\
 \def\fps@table{tbp}
 \def\ftype@table{2}
 \def\ext@table{lot}
-\def\fnum@table{\tablename~\thetable}
+\def\fnum@table{\textbf{\tablename~\thetable}}
 \def\table{\@float{table}}
 \def\endtable{\end@float}
 \@namedef{table*}{\@dblfloat{table}}
