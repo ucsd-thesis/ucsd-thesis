@@ -29,13 +29,23 @@ Warnings:
   No guaranty is made that this LaTeX class conforms to the official UCSD guidelines.
   Make sure that you check the final document against the Formatting Manual.
   
-  That being said, this class has been used successfully for publication of 
-  doctoral theses.  
+  That being said, this class has been routinely used for successful 
+  publication of doctoral theses.
 
   Let us know if you submit a thesis using this package.
 
 
+Known Issues:
+  Currently only the 12pt size conforms to the UCSD requirements.
+  The 10pt and 11pt options make the footnote fonts too small.
+
+
+Help/Contact:
+  If you need help try the ucsd-thesis google group:
+  http://groups.google.com/group/ucsd-thesis
+
+
 Bugs:
   Please report all bugs at:
-    http://code.google.com/p/ucsd-thesis/issues/list
+  http://code.google.com/p/ucsd-thesis/issues/list
 

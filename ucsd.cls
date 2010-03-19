@@ -171,10 +171,11 @@
 %%%                          now multiline titles will be single spaced.
 %%%                          Spacing between chair and co-chair single spaced.
 %%%
-%%%                   Version 3.6 2009/10
+%%%                   Version 3.6 2010/03
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>                       
 %%%
-%%%                        Figure and Tabel lables now bold in captions.
+%%%                        Figure and Table lables now bold in captions.
+%%%                        Top margin of abstract page now 2.5''
 %%%
 %%%  }
 %%% ====================================================================
@@ -197,7 +198,7 @@
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2009/10/24 V3.6 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2010/03/18 V3.6 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
@@ -681,9 +682,7 @@ on microfilm and electronically: }}\\
 % of the \title, \author, \degreetitle, \field, \campus, and \chair macros.
 % The page numbering is in the usual sequence for UCSD OGS--WBB.
 %
-% The OGS manual states that the top margin should be 2.5", however
-% it gives examples where this is not the case, and
-% this extra margin is not required (as of 2009/03/29) (novi).
+% The OGS manual states that the top margin should be 2.5".
 
 % addcontentsline line moved to fix TOC bug.  (JRB, 5-5-08)
 \def\abstract{ 
@@ -692,6 +691,7 @@ on microfilm and electronically: }}\\
   \begin{center}
   \ssp
   {\fmfont
+  \null\vspace{1.25in}  
   {\expandafter\uppercase\expandafter{\abstractlongname}}\par
   \vspace{.5in}
   {\bfseries
