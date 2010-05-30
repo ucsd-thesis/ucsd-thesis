@@ -177,6 +177,11 @@
 %%%                        Figure and Table lables now bold in captions.
 %%%                        Top margin of abstract page now 2.5''
 %%%
+%%%                   Version 3.7 2010/06
+%%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
+%%%
+%%%                        Links to abstract page fixed.
+%%%
 %%%  }
 %%% ====================================================================
 %%% To Do:
@@ -198,7 +203,7 @@
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2010/03/18 V3.6 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2010/06/01 V3.7 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
@@ -684,10 +689,10 @@ on microfilm and electronically: }}\\
 %
 % The OGS manual states that the top margin should be 2.5".
 
-% addcontentsline line moved to fix TOC bug.  (JRB, 5-5-08)
 \def\abstract{ 
+  \begin{alwayssingle}  
   \phantomsection
-  \begin{alwayssingle}
+  \addcontentsline{toc}{frontmatter}{\protect\numberline{}\abstractshortname}
   \begin{center}
   \ssp
   {\fmfont
@@ -715,7 +720,6 @@ on microfilm and electronically: }}\\
   \vspace{.3in}
   } % Closes fmfont above
   \end{center}
-  \addcontentsline{toc}{frontmatter}{\protect\numberline{}\abstractshortname}
   \par
 }
 
