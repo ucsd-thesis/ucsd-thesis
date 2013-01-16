@@ -1,7 +1,6 @@
 UCSD Doctoral Dissertation LaTeX Class
 --------------------------------------
-http://ucsd-thesis.googlecode.com
-
+https://github.com/diwakergupta/ucsd-thesis
 
 This folder should contain:
     template.tex              - Primary Driver File
