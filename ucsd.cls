@@ -282,6 +282,7 @@
 \ProcessOptions
 
 \input uct1\@ptsize.clo\relax
+\linespread{2}  % proper double-spacing.
 
 % Set the paper size to letter
 \setlength{\paperheight}{11.0in}
