@@ -1,15 +1,15 @@
-%
+    %
 % UCSD Dissertation Class
 %
 %   For the latest version go to:
 %     http://ucsd-thesis.googlecode.com
 %
-%   Release info, modification history and author list below. 
+%   Release info, modification history and author list below.
 %
 %
 %   This file was originally based on the UC thesis template (see below
 %   for documentation on that document).  As a result, this file
-%   contains deprecated commentary, code, and options.  
+%   contains deprecated commentary, code, and options.
 %
 % for LaTeX version 2e - 11/3/94
 %%% ====================================================================
@@ -23,10 +23,10 @@
 %%%
 %%%     docstring       = "This file is the main file for the ucsd-thesis
 %%%                        class, which is intended to meet the requirements
-%%%                        for University of California San Diego 
+%%%                        for University of California San Diego
 %%%                        Ph.D. dissertations.",
-%%%  
-%%%			   
+%%%
+%%%
 %%%                    UCTHESIS.STY v2.7 is based on the standard
 %%%			   report.sty as modified by Mittelbach and Schopf in
 %%%			   Jan 1992.  The primary differences are (1) the use
@@ -42,15 +42,15 @@
 %%%                        that arise with it.
 %%%
 %%%                    Version 2.x fixes a bug in the previous
-%%%			   version of 20 Jun 1988.  The bug was that 
+%%%			   version of 20 Jun 1988.  The bug was that
 %%%			   "draft" optional mode didn't work because of
 %%%			   problems in handling optional arguments.
-%%%                        This file does not seem to work with earlier 
+%%%                        This file does not seem to work with earlier
 %%%                        versions of LaTeX (pre-Jan 1992).
 %%%
-%%%                    Version 2.3 includes a single-spaced 
+%%%                    Version 2.3 includes a single-spaced
 %%%			   tabular* environment.
-%%%			
+%%%
 %%%                    Version 2.4 sets \evensidemargin correctly
 %%%			   for two-sided style.  It also adds new
 %%%			   environments (\smalltabular and
@@ -87,42 +87,42 @@
 %%%                        Supported until November 30, 1994
 %%%
 %%%                        A direct port to LaTeX2e from UCTHESIS
-%%%			   v2.7 by Ethan V. Munson, with no changes other 
-%%%			   than those for compatibility. 
+%%%			   v2.7 by Ethan V. Munson, with no changes other
+%%%			   than those for compatibility.
 %%%
 %%%                        The major revisions in ucthesis.cls
-%%%			   are converting option processing to LaTeX2e 
+%%%			   are converting option processing to LaTeX2e
 %%%			   conventions.  The uct1x files have been revised
 %%%			   to use the new font selection commands.
 %%%
-%%%			   Some users have had problems with the 
+%%%			   Some users have had problems with the
 %%%			   margins ending up too small on one side.
 %%%			   This appears to be a DVI-to-PostScript
 %%%			   driver or printer-adjustment problem.
 %%%			   If you have such trouble, make small adjustments
 %%%			   to the \textwidth and \oddsidemargin
 %%%			   settings in your document preamble.
-%%%			   
+%%%
 %%%			   Another problem some people have had is
 %%%			   that you can't use \pagestyle{headings}
 %%%			   and \markboth if you use \part.  The solution
 %%%			   is to get the headerfooter style, which is
 %%%			   nice and simple to use."
 %%%
-%%%			    
+%%%
 %%%                    Version 3.1 2008/05/13:
 %%%			   Jason Bandlow       - JRB
 %%%			   Ross Richardson     - RMR
-%%%	
-%%%			   The file as modified by Will Brockman (see below) 
-%%%                        was brought into compliance with current OGS guidelines.  
+%%%
+%%%			   The file as modified by Will Brockman (see below)
+%%%                        was brought into compliance with current OGS guidelines.
 %%%                        This includes text spacing,
 %%%			   adding ``Figure'' and ``Table'' to the TOF (TOL) entries,
 %%%			   allowing for two Chapter headings,
 %%%			   cleanup of frontmatter, compatibility with hyperref,
-%%%                        compatibility with indexing, 
+%%%                        compatibility with indexing,
 %%%			   streamlining of template.
-%%%			   Special thanks to John Farina for his initial fixes 
+%%%			   Special thanks to John Farina for his initial fixes
 %%%                        which prompted this release.
 %%%
 %%%			   Table of Contents bug fix (JRB)
@@ -132,18 +132,18 @@
 %%%                   Version 3.2 2009/02/23
 %%%                        Diwaker Gupta <diwaker@floatingsun.net>
 %%%
-%%%                        Brought into compliance with 
+%%%                        Brought into compliance with
 %%%                          OGS guidelines as of Nov 03 2008.
 %%%                        Modified template with additional information.
 %%%                        Honor user specified fonts in TOC/LOT/LOF.
 %%%                        Suppress warning when using the subfig package.
 %%%                        Add note about hyperref not working in draft mode.
-%%%                                                                    
-%%%                        
+%%%
+%%%
 %%%                   Version 3.3 2009/03/23
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
 %%%
-%%%                        Brought into compliance with 
+%%%                        Brought into compliance with
 %%%                          OGS guidelines as of 2009/03/19.
 %%%                          Passed the ruler lady on 2009/03/19.
 %%%                        Letter page size now default, will reject other page sizes.
@@ -156,7 +156,7 @@
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
 %%%                        David Collins
 %%%                        Macneil Shonle
-%%%                        
+%%%
 %%%                        Added the co-chair to the abstract page.
 %%%                        Added an option for two equal co-chairs.
 %%%                        Adjusted spacing on the signature and vita
@@ -164,7 +164,7 @@
 %%%
 %%%                   Version 3.5 2009/07/12
 %%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
-%%%                   
+%%%
 %%%                        Fixed spacing of preliminary entries in TOC.
 %%%                        Fixed alignment of multi-line captions in TOF.
 %%%                        Fixed spacing on the abstract page
@@ -172,7 +172,7 @@
 %%%                          Spacing between chair and co-chair single spaced.
 %%%
 %%%                   Version 3.6 2010/03
-%%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>                       
+%%%                        Novimir Pablant <antoniuk@physics.ucsd.edu>
 %%%
 %%%                        Figure and Table lables now bold in captions.
 %%%                        Top margin of abstract page now 2.5''
@@ -195,7 +195,7 @@
 %%%
 %%%   - section and subsection titles are aligned differently.
 %%%
-%%%   - Page numbering is hard coded for parts of the front matter.  
+%%%   - Page numbering is hard coded for parts of the front matter.
 %%%     Instead, page numbering should be automatic, but a warning should
 %%%     be displayed if it is not what is expected.
 %%%
@@ -218,12 +218,12 @@
 \DeclareOption{10pt}{\renewcommand\@ptsize{0}}
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}}
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}}
-\DeclareOption{oneside}{\@twosidefalse \@mparswitchfalse} 
-\DeclareOption{twoside}{\@twosidetrue  \@mparswitchtrue}  
+\DeclareOption{oneside}{\@twosidefalse \@mparswitchfalse}
+\DeclareOption{twoside}{\@twosidetrue  \@mparswitchtrue}
 \DeclareOption{draft}{\renewcommand\@draftmark{1}}
 \DeclareOption{final}{\renewcommand\@draftmark{0}}
 % RMR - Toggle how chapters are listed
-\DeclareOption{chapterheads}{\renewcommand\@chapterheadsmark{1}} 
+\DeclareOption{chapterheads}{\renewcommand\@chapterheadsmark{1}}
 
 % Letter size (8.5"" x 11") is required for UCSD. Do not allow any other size.
 \DeclareOption{landscape}
@@ -264,7 +264,7 @@
 % version.  To break this dependency, I have made \ds@draft set a marker
 % which is later tested to determine whether to actually do the draft
 % mode actions.
-% 
+%
 % Ethan Munson (October 16, 1992)
 
 % FMi 91/03/30: made twocolum.sty a file and twocolumn an option.
@@ -272,11 +272,11 @@
 % RmS 91/10/15: moved actual reading of twocolumn.sty
 %               to the end of this file.
 
-\def\ds@twocolumn{\@twocolumntrue} 
+\def\ds@twocolumn{\@twocolumntrue}
 
 % The \ProcessOptions command causes the execution of every option command
 % FOO which is declared and for which the user typed the FOO option in his
-% \documentclass.  For every undeclared option BAR there will be a warning 
+% \documentclass.  For every undeclared option BAR there will be a warning
 % message. (BBF 10/31/94)
 
 \ProcessOptions
@@ -381,7 +381,7 @@
 % DECLARATIONS
 %
 % These macros are used to declare arguments needed for the
-% construction of the front matter.  
+% construction of the front matter.
 
 % The year the degree will be officially conferred
 \def\degreeyear#1{\gdef\@degreeyear{#1}}
@@ -395,7 +395,7 @@
 % The name of your committee's cochair (if applicable)
 \def\cochair#1{\gdef\UCSD@cochair{#1}}
 
-% The names of your committee's equal co-chairs 
+% The names of your committee's equal co-chairs
 % (if applicable, and use this instead of chair and cochair)
 \def\cochairs#1#2{
   \gdef\UCSD@cochairs{true}
@@ -409,7 +409,7 @@
 
 % The number of committee members, which affects both the
 % number of lines and the amount of space between lines
-% on the approval page. 
+% on the approval page.
 \def\@numberofmembers{3}
 \def\@approvalspace{.75in}
 \def\numberofmembers#1{\gdef\@numberofmembers{#1}
@@ -420,12 +420,16 @@
 % The name of your degree's field (e.g. Psychology, Computer Science)
 \def\field#1{\gdef\@field{#1}}
 
+% The name of your specialization (e.g. Anthropogeny, Computational Neuroscience)
+\def\specialization#1{\gdef\@specialization{#1}}
+
+
 % You have to define the campus name twice because I can't figure out
 % how to get the TeX \uppercase macro to work for me (EVM, 9/21/94)
 
 % The name of your UC Campus CAPITALIZED (e.g. Berkeley, Los Angeles)
 % \def\campus#1{\gdef\@campus{#1}}
-\def\@campus{San Diego} 
+\def\@campus{San Diego}
 
 \def\includefigureindex#1{\gdef\@includefigureindex{#1}}
 \def\includetableindex#1{\gdef\@includetableindex{#1}}
@@ -433,7 +437,7 @@
 
 % \alwayssingle and \endalwayssingle
 %
-% These macros define an environment for front matter that is always 
+% These macros define an environment for front matter that is always
 % single column even in a double-column document.
 
 
@@ -443,7 +447,7 @@
 \def\endalwayssingle{\if@restonecol\twocolumn \else \newpage \fi}
 
 % \maketitle outputs the complete titlepage.  It requires all the
-% above macros except \campuscap.  It is probably not correct for 
+% above macros except \campuscap.  It is probably not correct for
 % joint (e.g. UCSD/SDSU) degrees.
 
 % Set the font that will be used in the front matter headings
@@ -456,9 +460,9 @@
 \addtolength{\textheight}{.5in}
 \addtolength{\footskip}{.25in}
 
-\def\makefrontmatter{  
-% TITLE PAGE.   
-% This is the first page of the dissertation.  The format 
+\def\makefrontmatter{
+% TITLE PAGE.
+% This is the first page of the dissertation.  The format
 % is specified by OGS.
 %
 {\ssp
@@ -474,15 +478,18 @@
     {\bfseries
      {\@title} \par}
     \bigskip \medskip
-    A dissertation submitted in partial satisfaction of the \par 
+    A dissertation submitted in partial satisfaction of the \par
 	\smallskip
-    requirements for the degree \par 
+    requirements for the degree \par
 	\smallskip
     {\@degreetitle} \par
     \bigskip \medskip
     in \par
     \bigskip \medskip
-    {\@field}\par
+    {\@field}
+    \ifx\@specialization\@isnotdefined \else%
+         (with a specialization in {\@specialization})\fi
+    \par
     \bigskip \medskip
     by \par
     \bigskip \medskip
@@ -505,18 +512,18 @@
   \vfil\null
 \end{alwayssingle}
 
-} 
+}
 
 
 % COPYRIGHTPAGE
 %
 % While it's technically optional you probably want a copyright page.
-% Note that if you don't have one, you need a completely blank page 
+% Note that if you don't have one, you need a completely blank page
 % anyway.
 
 \begin{alwayssingle}
 \thispagestyle{empty}
-\null\vfill\dsp 
+\null\vfill\dsp
 \begin{center}
 {\fmfont
 Copyright \par
@@ -540,8 +547,8 @@ All rights reserved.}
 \begin{center}
 \vspace{.25in}
 \vspace{\@approvalspace}
-\makebox[4in][l]{\parbox{4in}{\fmfont The dissertation of {\@author} 
-is approved, and it is acceptable in quality and form for publication 
+\makebox[4in][l]{\parbox{4in}{\fmfont The dissertation of {\@author}
+is approved, and it is acceptable in quality and form for publication
 on microfilm and electronically: }}\\
 \begin{tabular*}{4in}[t]{r@{\extracolsep{\fill}}r}
 & \rule{0pt}{\@approvalspace} \\
@@ -574,7 +581,7 @@ on microfilm and electronically: }}\\
   &
   % Add the Co-Chair label below the last line and make
   % vertical space before adding another line.
-  \newlength{\@tempapprovalspace} 
+  \newlength{\@tempapprovalspace}
   \settoheight{\@tempapprovalspace}{\UCSD@text@cochair}
   \setlength{\@tempapprovalspace}{-\@tempapprovalspace}
   \addtolength{\@tempapprovalspace}{-2pt}
@@ -625,7 +632,7 @@ on microfilm and electronically: }}\\
 % own page. The text is formatted relatively high on the page and
 % flush to the right.
 \newenvironment{epigraph}
-{\phantomsection 
+{\phantomsection
 \addcontentsline{toc}{frontmatter}{\protect\numberline{}Epigraph}%
 \begin{alwayssingle}
   \centerline{\expandafter\uppercase\expandafter{Epigraph}}%
@@ -636,7 +643,7 @@ on microfilm and electronically: }}\\
 % The myepigraph environment has no formatting information, so the
 % user can do whatever they wish.
 \newenvironment{myepigraph}
-{\phantomsection 
+{\phantomsection
 \addcontentsline{toc}{frontmatter}{\protect\numberline{}Epigraph}%
   \centerline{\expandafter\uppercase\expandafter{Epigraph}}}%
 {}
@@ -689,14 +696,14 @@ on microfilm and electronically: }}\\
 %
 % The OGS manual states that the top margin should be 2.5".
 
-\def\abstract{ 
-  \begin{alwayssingle}  
+\def\abstract{
+  \begin{alwayssingle}
   \phantomsection
   \addcontentsline{toc}{frontmatter}{\protect\numberline{}\abstractshortname}
   \begin{center}
   \ssp
   {\fmfont
-  \null\vspace{1.25in}  
+  \null\vspace{1.25in}
   {\expandafter\uppercase\expandafter{\abstractlongname}}\par
   \vspace{.5in}
   {\bfseries
@@ -706,13 +713,17 @@ on microfilm and electronically: }}\\
   \vspace{.5in}
   \@author\par
   \vspace{.3in}
-  {\@degreetitle} in \@field\par
+  {\@degreetitle} in \@field
+  \ifx\@specialization\@isnotdefined \else
+      \ (with a specialization in \@specialization)
+  \fi
+  \par
   \vspace{.3in}
   University of California, {\@campus}, \@degreeyear \par
   \vspace{.3in}
   {\UCSD@chair}, \UCSD@text@chair
   %Check if there is a co-chair and add accordingly.
-  \ifx\UCSD@cochair\@isnotdefined 
+  \ifx\UCSD@cochair\@isnotdefined
   \else
     \par
     {\UCSD@cochair}, \UCSD@text@cochair
@@ -734,8 +745,8 @@ on microfilm and electronically: }}\\
 % correctly (roman, lower-case, starting at 3) for the front matter
 % that follows the abstract.  It also resets page-numbering for
 % the remainder of the dissertation (arabic, starting at 1).
-% (WBB) At UCSD: put everything, including \titlepage,\copyrightpage,  
-% \approvalpage in frontmatter.  
+% (WBB) At UCSD: put everything, including \titlepage,\copyrightpage,
+% \approvalpage in frontmatter.
 % Changed def. WBB to go with change in use of frontmatter.
 
 \newenvironment{frontmatter}
@@ -874,9 +885,9 @@ on microfilm and electronically: }}\\
 {\par\ssp\def\@halignto{to#1}\@tabular}
 
 % \smalltabular and \smalltabular* are alternative tabular styles
-% in the \small font.  They are required because single-spacing implies a 
+% in the \small font.  They are required because single-spacing implies a
 % change of font to a particular size.
-% EVM, 7/20/93 
+% EVM, 7/20/93
 \def\smalltabular{\par\smallssp\let\@halignto\@empty\@tabular}
 \def\endsmalltabular{\endtabular}
 \expandafter \def\csname smalltabular*\endcsname #1%
@@ -969,7 +980,7 @@ on microfilm and electronically: }}\\
 % commented out.  Why?  Because the sample pages given in the OGSR
 % guidelines handout doesn't have a sample page for parts, and thus
 % it is unknown how to handle them.  -BB -(WBB)
-% Left in, WBB, but noted; maybe should get rid of this? 
+% Left in, WBB, but noted; maybe should get rid of this?
 %
 \def\part{\cleardoublepage   % Starts new page.
    \thispagestyle{plain}%    % Page style of part page is 'plain'
@@ -1077,7 +1088,7 @@ on microfilm and electronically: }}\\
 
 \def\tableofcontents{\@restonecolfalse
   \if@twocolumn\@restonecoltrue\onecolumn\fi%
-% From ucsd-thesis.sty (WBB), modified 
+% From ucsd-thesis.sty (WBB), modified
   \newpage
   \phantomsection
   \addcontentsline{toc}{frontmatter}{\protect\numberline{}\contentslongname}%
@@ -1104,8 +1115,8 @@ on microfilm and electronically: }}\\
 
 %% First line of l@chapter changed 24 May 89, as suggested
 %% by Jerry Leichter.
-%% Simpler version substituted, WBB 6.11.97 to get dots 
-%% Bold would be OK but I'm not getting the dots to work right. 
+%% Simpler version substituted, WBB 6.11.97 to get dots
+%% Bold would be OK but I'm not getting the dots to work right.
 %
 %\def\l@chapter#1#2{\addpenalty{-\@highpenalty}%
 %   \vskip 1.0em plus\p@   % space above chapter line
@@ -1132,7 +1143,7 @@ on microfilm and electronically: }}\\
 
 \newlength{\UCSD@toc@frontmatterLength}
 \setlength{\UCSD@toc@frontmatterLength}{0em}
-% Use the following line to have the front matter title aligned with 
+% Use the following line to have the front matter title aligned with
 % the chapter titles.  Otherwise they will aligned to the left (as required by OGS.)
 %\setlength{\UCSD@toc@frontmatterLength}{0em}
 \def\l@frontmatter{\normalfont\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\UCSD@toc@frontmatterLength}}
@@ -1140,7 +1151,7 @@ on microfilm and electronically: }}\\
 
 \newlength{\UCSD@toc@backmatterLength}
 \setlength{\UCSD@toc@backmatterLength}{0em}
-% Use the following line to have the back matter title aligned with 
+% Use the following line to have the back matter title aligned with
 % the chapter titles.  Otherwise they will aligned to the left (as required by OGS.)
 %\setlength{\UCSD@toc@backmatterLength}{0em}
 \def\l@backmatter{\normalfont\vskip 1em plus 1pt \@dottedtocline{0}{0em}{\UCSD@toc@frontmatterLength}}
@@ -1292,7 +1303,7 @@ on microfilm and electronically: }}\\
     \thispagestyle{plain}\parindent\z@
     \parskip\z@ plus .3\p@\relax\let\item\@idxitem
 \phantomsection
-\addcontentsline{toc}{backmatter}{\indexname} 
+\addcontentsline{toc}{backmatter}{\indexname}
 }
 
 \def\@idxitem{\par\hangindent 40\p@}
@@ -1398,7 +1409,7 @@ on microfilm and electronically: }}\\
 
 \long\def\@makecaption#1#2{% Add space only if something is ...
    \par\ifdim\prevdepth>-\p@ \vskip 10\p@\relax \fi % above the caption
-   \setbox\@tempboxa\hbox{\vbox to\topskip{}#1: #2\unskip\strut}% 
+   \setbox\@tempboxa\hbox{\vbox to\topskip{}#1: #2\unskip\strut}%
    \ifdim \wd\@tempboxa >\hsize      % IF longer than one line:
        {\ssp#1: #2\unskip\strut\par} %   THEN set as ordinary paragraph.
      \else                           %   ELSE  center.
@@ -1554,7 +1565,7 @@ on microfilm and electronically: }}\\
 %
 \def\ps@plain{\let\@mkboth\markboth%
 \def\@oddfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}% Pgno bot center
-\def\@evenfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}% 
+\def\@evenfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}%
 \def\@oddhead{}% heading (right)
 \def\@evenhead{}% heading (left)
 %\pagenumbering{arabic}}					% (WBB)
