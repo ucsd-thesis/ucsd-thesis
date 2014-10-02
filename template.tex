@@ -110,7 +110,22 @@
 
 %% GRAPHICX - This is the standard package for 
 %    including graphics for latex/pdflatex.
+\usepackage{scrextend}
+\usepackage{pslatex}
 \usepackage{graphicx}
+
+%% CAPTION
+% This overrides some of the ugliness in ucsd.cls and
+% allows the text to be double-spaced while letting figures,
+% tables, and footnotes to be single-spaced--all OGS requirements.
+% NOTE: Must appear after graphics and ams math
+\makeatletter
+\gdef\@ptsize{2}% 12pt documents
+\let\@currsize\normalsize
+\makeatother
+\usepackage{setspace}
+\doublespace
+\usepackage[font=small, width=0.9\textwidth]{caption}
 
 %% SUBFIG - Use this to place multiple images in a
 %    single figure.  Subfig will handle placement and
@@ -152,11 +167,32 @@
 %              pdfkeywords = {Keywords for Searching}, 
 %              pdfcreator = {pdfLaTeX with hyperref package}, 
 %              pdfproducer = {pdfLaTeX} }
+% \urlstyle{same}
+% \usepackage{bookmark}
+
+
+%% CITATIONS
+% Sets citation format
+% and fixes up citations madness
+\usepackage{microtype}  % avoids citations that hang into the margin
+
+
+%% FOOTNOTE-MAGIC
+% Enables footnotes in tables, re-referencing the same footnote multiple times.
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+
+
+%% TABLE FORMATTING MADNESS
+% Enable all sorts of fun table tricks
+\usepackage{rotating}  % Enables the sideways environment (NCPW)
+\usepackage{array}  % Enables "m" tabular environment http://ctan.org/pkg/array
+\usepackage{booktabs}  % Enables \toprule  http://ctan.org/pkg/array
+
 
 
 \begin{document}
-
-
 
 %% FRONT MATTER
 %
@@ -245,9 +281,8 @@ noon & medium & Croutons (Tomato Basil Soup \& Granny Smith Chicken Salad) \\
 %% APPENDIX
 \appendix
 \chapter{Final notes}
+What to do about things \cite{Martin_1983}.  What did he say \cite{Rilling_Insel_1999}.
   Remove me in case of abdominal pain.
-
-
 
 
 
@@ -255,9 +290,14 @@ noon & medium & Croutons (Tomato Basil Soup \& Granny Smith Chicken Salad) \\
 % \printindex %% Uncomment to display the index
 % \nocite{}  %% Put any references that you want to include in the bib 
 %               but haven't cited in the braces.
-% \bibliographystyle{alpha}  %% This is just my personal favorite style. 
+\bibliographystyle{alpha}  %% This is just my personal favorite style. 
 %                              There are many others.
-% \bibliography{myrefs}  %% This looks for the bibliography in myrefs.bib 
+%\setlength{\bibleftmargin}{0.25in}  % indent each item
+%\setlength{\bibindent}{-\bibleftmargin}  % unindent the first line
+%\def\baselinestretch{1.0}  % force single spacing
+%\setlength{\bibitemsep}{0.16in}  % add extra space between items
+\bibliography{template}  %% This looks for the bibliography in template.bib 
 %                          which should be formatted as a bibtex file.
+%                          and needs to be separately compiled into a bbl file.
 \end{document}
 
