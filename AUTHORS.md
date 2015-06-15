@@ -1,8 +1,8 @@
 Many people have contributed to this effort. 
 Any ommissions are not intentional.
 
-- Novimir Pablant <antoniuk@physics.ucsd.edu> (2009-2010)
-- Diwaker Gupta <diwaker@floatingsun.net> (2008-2009)
+- [Novimir Pablant](mailto:antoniuk@physics.ucsd.edu) (2009-2010)
+- [Diwaker Gupta](mailto:diwaker@floatingsun.net) (2008-2009)
 - Macneil Shonle (2009)
 - Himanshu Khatri (2009)
 - evilkartman (2009)
@@ -16,7 +16,7 @@ Any ommissions are not intentional.
 - Skip Garibaldi
 - Erza Hallck
 - Mike Zabrocki
-- Blaise B. Frederick <frederic@imasun.lbl.gov> (1994)
+- [Blaise B. Frederick](mailto:frederic@imasun.lbl.gov) (1994)
 - Many other UCSD graduate students 
   (especially from the Math department)
 
