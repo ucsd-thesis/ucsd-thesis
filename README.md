@@ -17,6 +17,8 @@ This folder should contain:
 Instructions
 ------------
 
+Download the files: https://github.com/ucsd-thesis/ucsd-thesis/archive/master.zip
+
 Copy all of the above files to the directory in which you plan to work.
 Look over `template.tex` to get started. If you choose to rename the tex files,
 update the `\include{template_frontmatter}` line correspondingly.
