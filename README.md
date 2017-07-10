@@ -40,7 +40,7 @@ Warnings
 --------
 This template has not endorced by OGS or any other official entity.
 The official formatting guide can be obtained from
-[OGS](http://ogs.ucsd.edu/AcademicAffairs/Documents/Dissertations_Theses_Formatting_Manual.pdf).
+[OGS](http://grad.ucsd.edu/_files/academic-affairs/Dissertations_Theses_Formatting_Manual.pdf).
 
 No guaranty is made that this LaTeX class conforms to the official UCSD guidelines.
 Make sure that you check the final document against the Formatting Manual.
@@ -70,8 +70,9 @@ Bugs
 ----
 
 Please submit bug reports on [github][3].
-[3]: https://github.com/ucsd-thesis/ucsd-thesis/issues
 
 Older bug reports can be accessed from [Google Code][4].
+
+[3]: https://github.com/ucsd-thesis/ucsd-thesis/issues
 [4]: http://code.google.com/p/ucsd-thesis/issues/list
 
