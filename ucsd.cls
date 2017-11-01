@@ -1563,6 +1563,8 @@ on microfilm and electronically: }}\\
  \def\subsectionmark##1{}}
 
 % Definition of 'plain' page style.
+\addtolength{\oddsidemargin}{-.55in} %makes left and right margin 1"
+\addtolength{\textwidth}{.55in} %makes left and right margin 1"
 %
 \def\ps@plain{\let\@mkboth\markboth%
 \def\@oddfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}% Pgno bot center
