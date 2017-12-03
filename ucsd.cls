@@ -1576,11 +1576,11 @@ on microfilm and electronically: }}\\
 
 % Definition of 'thesis' page style.
 %
-\def\ps@plain{\let\@mkboth\markboth%
+\def\ps@thesis{\let\@mkboth\markboth%
 \def\@oddfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}% Pgno bot center
 \def\@evenfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}%
 \def\@oddhead{}% heading (right)
-\def\@evenhead{}% heading (left)
+\def\@evenhead{}}% heading (left)
 %\pagenumbering{arabic}}					% (WBB)
 
 % Definition of 'preliminary' page style.
