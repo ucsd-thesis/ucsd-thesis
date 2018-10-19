@@ -474,7 +474,7 @@
     \null\vfil
   \begin{center}
     \fmfont
-    UNIVERSITY OF CALIFORNIA, {\expandafter\uppercase\expandafter{\@campus}}\par
+    UNIVERSITY OF CALIFORNIA {\expandafter\uppercase\expandafter{\@campus}}\par
     \bigskip \medskip
     {\bfseries
      {\@title} \par}
@@ -593,7 +593,7 @@ on microfilm and electronically: }}\\
 
 & \UCSD@text@chair
 \end{tabular*}\\[\@approvalspace]
-{\fmfont University of California, {\@campus}} \\
+{\fmfont University of California {\@campus}} \\
 \vspace{-.25in}
 \vspace{\@approvalspace}
 {\fmfont \@degreeyear}
@@ -720,7 +720,7 @@ on microfilm and electronically: }}\\
   \fi
   \par
   \vspace{.3in}
-  University of California, {\@campus}, \@degreeyear \par
+  University of California {\@campus}, \@degreeyear \par
   \vspace{.3in}
   {\UCSD@chair}, \UCSD@text@chair
   %Check if there is a co-chair and add accordingly.
