@@ -182,6 +182,12 @@
 %%%
 %%%                        Links to abstract page fixed.
 %%%
+%%%                   Version 3.8 2022/06
+%%%                        Sam Crow <scrow@eng.ucsd.edu>
+%%%
+%%%                        Removed signature lines from signature page,
+%%%                        renamed to Dissertation Approval Page
+%%%
 %%%  }
 %%% ====================================================================
 %%% To Do:
@@ -203,7 +209,7 @@
 %%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucsd}[2010/06/01 V3.7 University of California, San Diego, Dissertation Class]
+\ProvidesClass{ucsd}[2022/06/27 V3.8 University of California, San Diego, Dissertation Class]
 
 
 %    ****************************************
@@ -542,7 +548,7 @@ All rights reserved.}
 % (EVM, 9/19/94)
 
 \phantomsection
-\addcontentsline{toc}{frontmatter}{\protect\numberline{}Signature Page}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}Dissertation Approval Page}%
 \begin{alwayssingle}
 \null\vfill
 \begin{center}
@@ -550,49 +556,11 @@ All rights reserved.}
 \vspace{\@approvalspace}
 \makebox[4in][l]{\parbox{4in}{\fmfont The dissertation of {\@author}
 is approved, and it is acceptable in quality and form for publication
-on microfilm and electronically: }}\\
-\begin{tabular*}{4in}[t]{r@{\extracolsep{\fill}}r}
-& \rule{0pt}{\@approvalspace} \\
-\hline
-\ifnum \@numberofmembers > 2
-  & \rule{0pt}{\@approvalspace} \\
-  \hline
-\fi
-\ifnum \@numberofmembers > 3
-  & \rule{0pt}{\@approvalspace} \\
-  \hline
-\fi
-\ifnum \@numberofmembers > 4
-  & \rule{0pt}{\@approvalspace} \\
-  \hline
-\fi
-\ifnum \@numberofmembers > 5
-  & \rule{0pt}{\@approvalspace} \\
-  \hline
-\fi
-\ifnum \@numberofmembers > 6
-  & \rule{0pt}{\@approvalspace} \\
-  \hline
-\fi
+on microfilm and electronically.}}\\
 
-\ifx\UCSD@cochair\@isnotdefined% No cochair
-  &\rule{0pt}{\@approvalspace} \\
-  \hline
-\else% Cochair
-  &
-  % Add the Co-Chair label below the last line and make
-  % vertical space before adding another line.
-  \newlength{\@tempapprovalspace}
-  \settoheight{\@tempapprovalspace}{\UCSD@text@cochair}
-  \setlength{\@tempapprovalspace}{-\@tempapprovalspace}
-  \addtolength{\@tempapprovalspace}{-2pt}
-  \raisebox{\@approvalspace}[\@approvalspace][0pt]%
-  {\raisebox{\@tempapprovalspace}{\UCSD@text@cochair}}\\
-  \hline
-\fi
+% Space previously taken up by signature lines
+\vspace{3in}
 
-& \UCSD@text@chair
-\end{tabular*}\\[\@approvalspace]
 {\fmfont University of California {\@campus}} \\
 \vspace{-.25in}
 \vspace{\@approvalspace}
