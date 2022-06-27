@@ -131,7 +131,9 @@
 \makeatother
 \usepackage{setspace}
 \doublespace
-\usepackage[font=small, width=0.9\textwidth]{caption}
+% singlelinecheck=false disables automatic centering for single-line captions,
+% so all the captions will be consistently justified
+\usepackage[font=small, width=0.9\textwidth, singlelinecheck=false]{caption}
 \usepackage[capposition=bottom]{floatrow} %force captions below figure per OGS requirement
 
 %% SUBFIG - Use this to place multiple images in a
@@ -310,4 +312,3 @@ What to do about things \cite{Martin_1983}.  What did he say \cite{Rilling_Insel
 \singlespace  %to force bibilography environment to use single spacing for each entry 
               %double spacing between entries remains
 \end{document}
-
